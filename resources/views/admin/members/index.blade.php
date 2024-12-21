@@ -12,18 +12,16 @@
                         @if (Session::has('msg'))
                             <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
                         @endif
-                        <a class="btn btn-sm btn-outline-success float-end" href="{{ route('members.create') }}">Add
-                            Member</a>
-                        {{-- </div> --}}
+                        <a class="btn btn-sm btn-outline-success float-end" href="{{ route('members.create') }}">Add Member</a>
+                        
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Designation</th>
                                     <th scope="col">Image</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Member From</th>
+                                    <th scope="col">Added On</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -34,34 +32,31 @@
                                 @foreach ($members as $member)
                                     <tr>
                                         <th scope="row">{{ $startIndex++ }}</th>
-                                        <td>{{ $member->name }} <span
-                                                class="{{ $member->type == 1 ? 'text-primary' : 'text-success' }}"><strong>({{ $member->type == 1 ? 'Stuff' : 'Member' }})</strong></span>
-                                        </td>
-                                        <td> <img src="{{ getImage($member->image, 'MemberImage') }}" alt=""
-                                                height="50px" width="50px"></td>
-                                        <td>{{ $member->phone }}</td>
-                                        <td>{{ $member->email }}</td>
-                                        <td> {{ \Carbon\Carbon::parse($member->join_date)->isoFormat('Do MMMM YYYY') }}</td>
+                                        <td>{{ $member->name }}</td>
+                                        <td>{{ $member->designation }}</td>
                                         <td>
-                                            <a href="{{ route('members.edit', $member->slug) }}"><i
-                                                    class="ri-pencil-fill"></i></a>
-                                            <form method="POST" action="{{ route('members.destroy', $member->slug) }}"
-                                                class="d-inline-block pl-2">
+                                            @if($member->image)
+                                                <img src="{{ asset('storage/' . $member->image) }}" alt="Image" width="50">
+                                            @else
+                                                N/A
+                                            @endif
+                                        </td>
+                                        <td>{{ \Carbon\Carbon::parse($member->created_at)->isoFormat('Do MMMM YYYY') }}</td>
+                                        <td>
+                                            <a href="{{ route('members.edit', $member->id) }}"><i class="ri-pencil-fill"></i></a>
+                                            <form method="POST" action="{{ route('members.destroy', $member->id) }}" 
+                                                  class="d-inline-block">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="delete-icon show_confirm"
-                                                    data-toggle="tooltip" title='Delete'>
-
+                                                <button type="submit" class="delete-icon show_confirm" 
+                                                        data-toggle="tooltip" title="Delete">
                                                     <i class="ri-delete-bin-2-fill"></i>
-
                                                 </button>
                                             </form>
                                         </td>
                                     </tr>
                                 @endforeach
-
                             </tbody>
-
                         </table>
                         {{ $members->links() }}
                         <!-- End Default Table Example -->
@@ -69,6 +64,5 @@
                 </div>
             </div>
         </div>
-
     </section>
 @endsection

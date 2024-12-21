@@ -8,45 +8,30 @@
 <section class="popular-classes sec">
     <div class="container">
         <div class="row">
+            @foreach ($videos as $video)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
-                    <iframe src="https://www.youtube.com/embed/NAQ8fZuQNYI?si=Tpm_XxPwL5QpbAND"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    @php
+                        // Extract the YouTube video ID from the link
+                        preg_match('/(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/', $video->youtube_link, $matches);
+                        $videoId = $matches[1] ?? '';
+                    @endphp
+                    @if($videoId)
+                        <iframe src="https://www.youtube.com/embed/{{ $videoId }}?si=wXQIJ4vpwZ56MU31"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    @else
+                        <p>Invalid YouTube Link</p>
+                    @endif
                 </div>
                 <div class="pop-cls-txt">
-                    <h5>Stock market profit via switchwords</h5>
-                    <a href="https://youtu.be/NAQ8fZuQNYI?si=51XW2OHDcWHwEzbd" target="_blank"
+                    <h5>{{ $video->title }}</h5>
+                    <a href="{{ $video->youtube_link }}" target="_blank"
                         class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost">Watch Now</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
-                    <iframe src="https://www.youtube.com/embed/NAQ8fZuQNYI?si=Tpm_XxPwL5QpbAND"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="pop-cls-txt">
-                    <h5>Stock market profit via switchwords</h5>
-                    <a href="https://youtu.be/NAQ8fZuQNYI?si=51XW2OHDcWHwEzbd" target="_blank"
-                        class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost">Watch Now</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
-                    <iframe src="https://www.youtube.com/embed/NAQ8fZuQNYI?si=Tpm_XxPwL5QpbAND"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="pop-cls-txt">
-                    <h5>Stock market profit via switchwords</h5>
-                    <a href="https://youtu.be/NAQ8fZuQNYI?si=51XW2OHDcWHwEzbd" target="_blank"
-                        class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost">Watch Now</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -64,22 +49,18 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="owl-carousel owl-theme testimonial-carousel">
+                        @foreach ($testimonials as $testimonial)
                         <div class="item text-center">
                             <div class="testi-txt">
-                                <p class="mb-4"><q>Seema Ji exhibits exceptional proficiency in her subject matter
-                                        and psychic talents. It has been a pleasure participating in her classes and
-                                        sessions. She is dedicated to fostering an inclusive learning environment,
-                                        actively seeking and incorporating feedback from every participant. Her
-                                        energy is both engaging and enriching. I have personally attended her
-                                        Switchwords classes, and I highly commend her commitment and expertise.
-                                        Wishing her continued success!</q></p>
+                                <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
                                 <div class="tisti-img">
-                                    <img src="{{asset('frontend/assets/img/testimonial-img.jpg')}}" alt="Testimonials">
+                                    <img src="{{asset('storage/'.$testimonial->image_path)}}" alt="{{ $testimonial->name }}">
                                 </div>
-                                <h5>Mamtta Shard</h5>
-                                <p>India</p>
+                                <h5>{{ $testimonial->name }}</h5>
+                                <p>{{ $testimonial->location }}</p>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -93,7 +74,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <div class="mb-4">
-                    <img src="assets/img/google-reviews-1-.png" height="100" alt="Google Review">
+                    <img src="{{asset('frontend/assets/img/google-reviews-1-.png')}}" height="100" alt="Google Review">
                 </div>
                 <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x396db79c49a8400d:0x276a02c41fea5bf6!12e1?source=g.page.m.kd._&laa=lu-desktop-review-solicitation"
                     target="_blank" class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost">MORE REVIEW

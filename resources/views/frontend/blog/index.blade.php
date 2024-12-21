@@ -8,7 +8,22 @@
 <section class="popular-classes sec">
     <div class="container">
         <div class="row">
+            @foreach ($blogs as $blog)
             <div class="col-lg-4 col-md-6 mb-4">
+                <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{asset('storage/'.$blog->image_path)}}" alt="{{ $blog->title }}">
+                </div>
+                <div class="pop-cls-icon">
+                    <i class="bi bi-brightness-high"></i>
+                </div>
+                <div class="pop-cls-txt blog-item-text">
+                    <a href="{{route('blogDetails',$blog->slug)}}">
+                        {{ $blog->title }}
+                    </a>
+                </div>
+            </div>
+            @endforeach
+            {{-- <div class="col-lg-4 col-md-6 mb-4">
                 <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{asset('frontend/assets/img/pop-cls.jpg')}}" alt="Popular Classes">
                 </div>
@@ -20,33 +35,8 @@
                         Free Reiki Healing Online Course: Discover the Power of Reiki
                     </a>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{asset('frontend/assets/img/pop-cls.jpg')}}" alt="Popular Classes">
-                </div>
-                <div class="pop-cls-icon">
-                    <i class="bi bi-calendar4-week"></i>
-                </div>
-                <div class="pop-cls-txt blog-item-text">
-                    <a href="blog-details.html">
-                        Free Reiki Healing Online Course: Discover the Power of Reiki
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="pop-cls-img" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="{{asset('frontend/assets/img/pop-cls.jpg')}}" alt="Popular Classes">
-                </div>
-                <div class="pop-cls-icon">
-                    <i class="bi bi-calendar4-week"></i>
-                </div>
-                <div class="pop-cls-txt blog-item-text">
-                    <a href="blog-details.html">
-                        Free Reiki Healing Online Course: Discover the Power of Reiki
-                    </a>
-                </div>
-            </div>
+            </div> --}}
+            
         </div>
     </div>
 </section>

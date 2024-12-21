@@ -95,39 +95,19 @@
             </div>
         </div>
         <div class="row">
+            @foreach ($members as $member)
             <div class="col-md-4">
                 <div class="expert-box" data-aos="fade-up" data-aos-duration="1000">
                     <div class="expert-img">
-                        <img src="{{asset('frontend/assets/img/expert.jpg')}}" alt="Expert Trainer">
+                        <img src="{{asset('storage/'.$member->image)}}" alt="{{ $member->name }}">
                     </div>
                     <div class="expert-text">
-                        <h4>Layla Santiago</h4>
-                        <p>Pilates Instructor</p>
+                        <h4>{{ $member->name }}</h4>
+                        <p>{{ $member->designation }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="expert-box" data-aos="fade-up" data-aos-duration="2000">
-                    <div class="expert-img">
-                        <img src="{{asset('frontend/assets/img/expert.jpg')}}" alt="Expert Trainer">
-                    </div>
-                    <div class="expert-text">
-                        <h4>Layla Santiago</h4>
-                        <p>Pilates Instructor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="expert-box" data-aos="fade-up" data-aos-duration="3000">
-                    <div class="expert-img">
-                        <img src="{{asset('frontend/assets/img/expert.jpg')}}" alt="Expert Trainer">
-                    </div>
-                    <div class="expert-text">
-                        <h4>Layla Santiago</h4>
-                        <p>Pilates Instructor</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="exp-shape">
@@ -140,7 +120,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <img src="{{asset('frontend/assets/img/services-img.png')}}" alt="Services">
+                <img src="{{asset('frontend/assets/img/services.png')}}" alt="Services"
                     data-aos-duration="1000">
             </div>
             <div class="col-md-6">
@@ -219,22 +199,18 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="owl-carousel owl-theme testimonial-carousel">
+                        @foreach ($testimonials as $testimonial)
                         <div class="item text-center">
                             <div class="testi-txt">
-                                <p class="mb-4"><q>Seema Ji exhibits exceptional proficiency in her subject matter
-                                        and psychic talents. It has been a pleasure participating in her classes and
-                                        sessions. She is dedicated to fostering an inclusive learning environment,
-                                        actively seeking and incorporating feedback from every participant. Her
-                                        energy is both engaging and enriching. I have personally attended her
-                                        Switchwords classes, and I highly commend her commitment and expertise.
-                                        Wishing her continued success!</q></p>
+                                <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
                                 <div class="tisti-img">
-                                    <img src="{{asset('frontend/assets/img/testimonial-img.jpg')}}" alt="Testimonials">
+                                    <img src="{{asset('storage/'.$testimonial->image_path)}}" alt="{{ $testimonial->name }}">
                                 </div>
-                                <h5>Mamtta Shard</h5>
-                                <p>India</p>
+                                <h5>{{ $testimonial->name }}</h5>
+                                <p>{{ $testimonial->location }}</p>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -254,45 +230,21 @@
         </div>
         <div class="row justify-content-end">
             <div class="col-md-6">
+                @foreach ($blogs as $blog)
                 <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
-                    <a href="javascript:void(0)">
+                    <a href="{{route('blogDetails',$blog->slug)}}">
                         <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/blog-img.jpg')}}" alt="blog img">
+                            <img src="{{asset('storage/'.$blog->image_path)}}" alt="{{ $blog->title }}">
                         </div>
                         <div class="blog-text">
-                            <p><i class="bi bi-calendar-week me-2"></i> 23 Aug 2024 <i
+                            <p><i class="bi bi-calendar-week me-2"></i> {{ $blog->created_at->isoFormat('Do MMMM YYYY') }} <i
                                     class="bi bi-layers ms-3 me-2"></i>Vinyasa Yoga
                             </p>
-                            <h5>13 Major Yoga Mantras to Memorize</h5>
+                            <h5>{{ $blog->title }}</h5>
                         </div>
                     </a>
                 </div>
-                <div class="blog-box" data-aos="fade-right" data-aos-duration="2000">
-                    <a href="javascript:void(0)">
-                        <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/blog-img.jpg')}}" alt="blog img">
-                        </div>
-                        <div class="blog-text">
-                            <p><i class="bi bi-calendar-week me-2"></i> 23 Aug 2024 <i
-                                    class="bi bi-layers ms-3 me-2"></i>Vinyasa Yoga
-                            </p>
-                            <h5>13 Major Yoga Mantras to Memorize</h5>
-                        </div>
-                    </a>
-                </div>
-                <div class="blog-box" data-aos="fade-right" data-aos-duration="3000">
-                    <a href="javascript:void(0)">
-                        <div class="blog-img">
-                            <img src="{{asset('frontend/assets/img/blog-img.jpg')}}" alt="blog img">
-                        </div>
-                        <div class="blog-text">
-                            <p><i class="bi bi-calendar-week me-2"></i> 23 Aug 2024 <i
-                                    class="bi bi-layers ms-3 me-2"></i>Vinyasa Yoga
-                            </p>
-                            <h5>13 Major Yoga Mantras to Memorize</h5>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
