@@ -41,7 +41,7 @@
                                         <td>${{ number_format($course->sale_price, 2) }}</td>
                                         <td>{{ \Carbon\Carbon::parse($course->created_at)->isoFormat('Do MMMM YYYY') }}</td>
                                         <td>
-                                            <a href="{{ route('paid-courses.show', $course->id) }}"><i class="ri-eye-fill">{{$applycount}}</i></a>
+                                            <a href="{{ route('paid-courses.show', $course->id) }}"><i class="ri-eye-fill">{{$course->courseRequests->count()}}</i></a>
                                             <a href="{{ route('paid-courses.edit', $course->id) }}"><i class="ri-pencil-fill"></i></a>
                                             <form method="POST" action="{{ route('paid-courses.destroy', $course->id) }}" 
                                                   class="d-inline-block pl-2">

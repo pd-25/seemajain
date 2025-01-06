@@ -13,8 +13,8 @@ class serviceController extends Controller
     public function index()
     {
         $services = Service::paginate(10);
-        $bookingcount = ServiceRequest::count();
-        return view('admin.services.index', compact('services','bookingcount'));
+        // $bookingcount = ServiceRequest::count();
+        return view('admin.services.index', compact('services'));
     }
 
     public function create()

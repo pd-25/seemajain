@@ -41,7 +41,7 @@
                                        
                                         <td>{{ $service->created_at->isoFormat('Do MMMM YYYY') }}</td>
                                         <td>
-                                            <a href="{{ route('services.show', $service->id) }}"><i class="ri-eye-fill">{{$bookingcount}}</i></a>
+                                            <a href="{{ route('services.show', $service->id) }}"><i class="ri-eye-fill">{{$service->serviceRequests->count()}}</i></a>
 
                                             <a href="{{ route('services.edit', $service->id) }}"><i class="ri-pencil-fill"></i></a>
                                             <form method="POST" action="{{ route('services.destroy', $service->id) }}" 

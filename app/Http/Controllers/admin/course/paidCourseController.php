@@ -13,8 +13,8 @@ class paidCourseController extends Controller
     public function index()
     {
         $courses = Course::paginate(10);
-        $applycount = CourseRequest::count();
-        return view('admin.course.paid_course.index', compact('courses','applycount'));
+        // $applycount = CourseRequest::count();
+        return view('admin.course.paid_course.index', compact('courses'));
     }
 
     /**
