@@ -87,7 +87,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Header || Menu 
+/* Header || Menu
  */
 .header {
     position: relative;
@@ -238,13 +238,13 @@ nav ul li a:hover {
     display: none;
 }
 
-/* Banner Section 
+/* Banner Section
  */
 .banner {
     height: 100%;
     height: 100vh;
     position: relative;
-    background: url('../img/banner/banner-img.jpg');
+    background: url('../img/banner/banner-img.png');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 85vw auto;
@@ -274,13 +274,13 @@ nav ul li a:hover {
 
 .banner-content h1 {
     color: var(--primary-color);
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 50px;
 }
 
 .banner-content p {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 50px;
 }
 
@@ -377,7 +377,7 @@ nav ul li a:hover {
 /* Why Choose Section
  */
 .why-choose {
-    background-image: url("../img/why-choose.jpg");
+    background-image: url("../img/why-choose.png");
     background-position: 100% -170px;
     background-repeat: no-repeat;
     background-size: auto;
@@ -404,7 +404,7 @@ nav ul li a:hover {
 /* Testimonials Section
  */
 .testimonials {
-    background: url('../img/testimonial-bg.jpeg') no-repeat fixed;
+    background: url('../img/testimonial-bg.png') no-repeat fixed;
     background-size: cover;
     position: relative;
     height: 750px;
@@ -442,7 +442,7 @@ nav ul li a:hover {
     font-style: italic;
 }
 
-/* Free Tutorial 
+/* Free Tutorial
  */
 
 .video-tutorial {
@@ -490,11 +490,11 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-/* Blog Section 
+/* Blog Section
  */
 
 .blog {
-    background-image: url("../img/blog.jpg");
+    background-image: url("../img/blog.png");
     background-position: center left;
     background-repeat: no-repeat;
 }
@@ -529,7 +529,7 @@ nav ul li a:hover {
 }
 
 
-/* Footer Section 
+/* Footer Section
  */
 
 .footer-overlay {
@@ -631,7 +631,7 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-/* Services Page 
+/* Services Page
  */
 
 .service-item {
@@ -682,7 +682,7 @@ nav ul li a:hover {
     transition: all 0.25s ease;
 }
 
-/* Courses Details 
+/* Courses Details
  */
 .courses-details-highlight {
     background-color: #FFFFFF;

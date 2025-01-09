@@ -136,7 +136,7 @@
                         <h5>Contact Us</h5>
                         <p><i class="bi bi-geo-alt me-2"></i> 121 Kingt Melbourne VIC 3000, Australia</p>
                         <p><i class="bi bi-telephone me-2"></i> +91 98201 27053</p>
-                        <p><i class="bi bi-envelope me-2"></i> info@seemmajain.in</p>
+                        <p><i class="bi bi-envelope me-2"></i> anubhoooti17@gmail.com</p>
                     </div>
                 </div>
             </div>
