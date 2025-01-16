@@ -244,7 +244,7 @@ nav ul li a:hover {
     height: 100%;
     height: 100vh;
     position: relative;
-    background: url('../img/banner/banner-img.png');
+    background: url('../img/banner/banner-img.webp');
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 85vw auto;
@@ -377,7 +377,7 @@ nav ul li a:hover {
 /* Why Choose Section
  */
 .why-choose {
-    background-image: url("../img/why-choose.png");
+    background-image: url("../img/why-choose.webp");
     background-position: 100% -170px;
     background-repeat: no-repeat;
     background-size: auto;
@@ -404,7 +404,7 @@ nav ul li a:hover {
 /* Testimonials Section
  */
 .testimonials {
-    background: url('../img/testimonial-bg.png') no-repeat fixed;
+    background: url('../img/testimonial-bg.webp') no-repeat fixed;
     background-size: cover;
     position: relative;
     height: 750px;
