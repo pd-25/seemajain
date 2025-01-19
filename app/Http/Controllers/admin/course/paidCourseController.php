@@ -43,6 +43,9 @@ class paidCourseController extends Controller
             'curriculum' => 'nullable|string',
             'instructor' => 'nullable|string',
             'image' => 'nullable|image|max:2048', // Image validation
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:500',
+            'hederscript' => 'nullable|string',
         ]);
 
         // Handle image upload if exists
@@ -94,6 +97,9 @@ class paidCourseController extends Controller
             'curriculum' => 'nullable|string',
             'instructor' => 'nullable|string',
             'image' => 'nullable|image|max:2048', // Image validation
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string|max:500',
+            'hederscript' => 'nullable|string',
         ]);
 
         // Handle image upload if exists

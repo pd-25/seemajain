@@ -26,6 +26,9 @@ class Course extends Model
         'curriculum',
         'instructor',
         'image',
+        "meta_title",
+        "meta_description",
+        "hederscript",
     ];
 
     // Specify any relationships this model might have (if any)

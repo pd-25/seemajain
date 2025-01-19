@@ -51,7 +51,7 @@
                                     @enderror
                                 </div>
                             </div>
-
+<hr>
                             <div class="row mb-3">
                                 <label for="meta_title" class="col-sm-2 col-form-label">Meta Title</label>
                                 <div class="col-sm-10">

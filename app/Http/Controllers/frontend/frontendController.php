@@ -8,6 +8,7 @@ use App\Models\Course;
 use App\Models\CourseRequest;
 use App\Models\FreeVideo;
 use App\Models\Member;
+use App\Models\Seo;
 use App\Models\Service;
 use App\Models\ServiceRequest;
 use App\Models\Testimonial;
@@ -20,35 +21,41 @@ class frontendController extends Controller
         $courses = Course::orderBy("id", "desc")->get();
         $members = Member::orderBy("id","desc")->take(3)->get();
         $blogs = Blog::orderBy("id","desc")->take(3)->get();
-        return view("frontend.index",compact("testimonials","courses","members","blogs"));
+        $seo = Seo::where('page_name','home')->first();
+        return view("frontend.index",compact("testimonials","courses","members","blogs","seo"));
     }
 
     //course 
     public function course(){
         $courses = Course::orderBy("id", "desc")->get();
-        return view("frontend.course.index",compact("courses"));
+        $seo = Seo::where('page_name','course')->first();
+        return view("frontend.course.index",compact("courses","seo"));
     }
 
     public function courseDetail($slug){
         $course = Course::where("slug",$slug)->first();
-        return view("frontend.course.courseDetails" ,compact("course"));
+        $seo = $course;
+        return view("frontend.course.courseDetails" ,compact("course","seo"));
 
     }
     public function freeCourse(){
         $course = FreeVideo::where('type','1')->orderBy("id", "desc")->get();
-    return view('frontend.course.freeCourse',compact('course'));
+        $seo = Seo::where('page_name','free-course')->first();
+    return view('frontend.course.freeCourse',compact('course','seo'));
     }
 
     //service
     public function services(){
         $services = Service::orderBy("id", "desc")->get();
-        return view('frontend.service',compact('services'));
+        $seo = Seo::where('page_name','services')->first();
+        return view('frontend.service',compact('services','seo'));
     }
 
     //blogs
     public function blogs(){
-        $blogs = Blog::orderBy("id", "desc")->all();
-        return view('frontend.blog.index',compact('blogs'));
+        $blogs = Blog::orderBy("id", "desc")->get();
+        $seo = Seo::where('page_name','blog')->first();
+        return view('frontend.blog.index',compact('blogs','seo'));
     }
     public function blogDetails($slug)
     {
@@ -59,8 +66,8 @@ class frontendController extends Controller
         $relatedBlogs = Blog::where('id', '!=', $blog->id) // Exclude the current blog
             ->take(5) // Limit to 5 related blogs
             ->get();
-    
-        return view('frontend.blog.blogDetails', compact('blog', 'relatedBlogs'));
+    $seo = $blog;
+        return view('frontend.blog.blogDetails', compact('blog', 'relatedBlogs','seo'));
     }
     
 
@@ -69,19 +76,22 @@ class frontendController extends Controller
         $members = Member::orderBy("id","desc")->take(3)->get();
         $blogs = Blog::orderBy("id","desc")->take(3)->get();
         $testimonials = Testimonial::all();
-        return view('frontend.about', compact('members','blogs','testimonials'));
+        $seo = Seo::where('page_name','about-us')->first();
+        return view('frontend.about', compact('members','blogs','testimonials','seo'));
     }
 
     //testimonial
     public function testimonial(){
         $videos = FreeVideo::where('type','2')->take(3)->get();
         $testimonials = Testimonial::all();
-        return view('frontend.testiminal',compact('testimonials','videos'));
+        $seo = Seo::where('page_name','testimonial')->first();
+        return view('frontend.testiminal',compact('testimonials','videos','seo'));
     }
 
     //contact
     public function contact(){
-        return view('frontend.contact');
+        $seo = Seo::where('page_name','contact')->first();
+        return view('frontend.contact',compact('seo'));
     }
 
     public function bookingstore(Request $request)

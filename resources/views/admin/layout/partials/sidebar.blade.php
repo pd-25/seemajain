@@ -55,6 +55,12 @@
             </a>
         </li> 
 
+        <li class="nav-item {{ Route::is('seo*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('seo.index') }}">
+                <i class="bi bi-grid"></i>
+                <span>Seo</span>
+            </a>
+        </li> 
     </ul>
 
 </aside>
