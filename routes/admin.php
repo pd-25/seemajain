@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\dashboard\DashboardController;
 use App\Http\Controllers\admin\DisputeLetterController;
 use App\Http\Controllers\admin\member\memberController;
 use App\Http\Controllers\admin\seo\seoController;
+use App\Http\Controllers\admin\offer\offerController;
 use App\Http\Controllers\admin\service\serviceController;
 use App\Http\Controllers\admin\testimonial\testimonialController;
 use Illuminate\Support\Facades\Route;
@@ -31,5 +32,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::delete('/booking/{id}', [serviceController::class, 'bookingdestroy'])->name('bookings.destroy');
     Route::delete('/course/{id}', [paidCourseController::class, 'bookingdestroy'])->name('course.destroy');
     Route::resource('seo', seoController::class);
+    Route::resource('offer', offerController::class);
 
 });

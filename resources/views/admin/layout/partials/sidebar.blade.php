@@ -61,6 +61,14 @@
                 <span>Seo</span>
             </a>
         </li> 
+
+        <li class="nav-item {{ Route::is('offer*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('offer.index') }}">
+                <i class="bi bi-grid"></i>
+                <span>Offer</span>
+            </a>
+        </li> 
+
     </ul>
 
 </aside>
