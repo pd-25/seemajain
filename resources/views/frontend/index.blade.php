@@ -334,5 +334,122 @@
             </div>
         </div>
     </section>
+    @if($offers->isNotEmpty())
+    <div class="container text-center mt-5">
+        <!-- The modal will automatically open after 3 seconds -->
+      </div>
+      @endif
+    
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="discountModal"
+        tabindex="-1"
+        aria-labelledby="discountModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+            @foreach ($offers as $offer)
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="discountModalLabel">{{$offer->title}}</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-center">
+                  <h6 style="color: black" class="mb-3">{{$offer->description}}</h6>
+
+                  
+                  <ul class="course-list ">
+                    @if ($offer->courses->isNotEmpty())
+                      @foreach ($offer->courses as $course)
+                      <li style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>{{ $course->title }}</span>
+                        <a class="ma-btn-primary get-course" href="{{ route('courseDetail', $course->slug) }}">Get Course</a>
+                    </li>
+                        @endforeach
+                    @endif
+                  </ul>
+                  
+                
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <a href="{{route('contact')}}" class="ma-btn-primary register-btn">
+                    Contact Us
+                </a>
+                </div>
+              </div>
+            @endforeach
+         
+        </div>
+      </div>
+    
+      <!-- Bootstrap JS -->
+      @if($offers->isNotEmpty())
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        // Automatically open the modal after 3 seconds
+        window.onload = function () {
+          setTimeout(function () {
+            const modal = new bootstrap.Modal(document.getElementById('discountModal'));
+            modal.show();
+          }, 3000); // 3 seconds delay
+        };
+      </script>
+      @endif
     <!-- End Blog -->
+    <style>
+        .modal-content {
+          background-color: #fff; /* Matches blue background */
+          color: white;
+          border-radius: 10px;
+        }
+        .modal-header {
+          background-color: #543269; /* Matches red strip */
+        }
+        .modal-title {
+          font-weight: bold;
+        }
+        .course-list {
+          list-style: none;
+          padding: 0;
+        }
+        .course-list li {
+          margin: 5px 0;
+          background-color: #fedb6f; /* Matches yellow background for text */
+          color: black;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+        .register-btn {
+          background-color: #543269;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-weight: bold;
+          text-decoration: unset;
+        }
+        .get-course {
+            color: white;
+    border: navajowhite;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 14px;
+    text-decoration: unset;
+    background-color: #543269;
+        }
+        .btn-close {
+      background-color: white; /* Add white background */
+      opacity: 1; /* Ensure full visibility */
+    }
+    .btn-close:focus,
+    .btn-close:hover {
+      background-color: #cccccc; /* Optional: Change on hover */
+    }
+      </style>
 @endsection

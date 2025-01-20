@@ -53,4 +53,20 @@ public function courseRequests()
 {
     return $this->hasMany(CourseRequest::class);
 }
+protected static function boot()
+    {
+        parent::boot();
+
+        static::deleted(function ($course) {
+            $offers = Offer::all();
+            foreach ($offers as $offer) {
+                $courseIds = json_decode($offer->course_ids, true);
+                if (($key = array_search($course->id, $courseIds)) !== false) {
+                    unset($courseIds[$key]);
+                    $offer->course_ids = json_encode(array_values($courseIds));
+                    $offer->save();
+                }
+            }
+        });
+    }
 }

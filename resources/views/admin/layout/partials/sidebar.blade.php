@@ -55,6 +55,12 @@
             </a>
         </li> 
 
+        <li class="nav-item {{ Route::is('offers*') ? 'active' : ''}}">
+            <a class="nav-link" href="{{ route('offers.index') }}">
+                <i class="bi bi-grid"></i>
+                <span>Offers</span>
+            </a>
+        </li> 
         <li class="nav-item {{ Route::is('seo*') ? 'active' : ''}}">
             <a class="nav-link" href="{{ route('seo.index') }}">
                 <i class="bi bi-grid"></i>

@@ -8,6 +8,7 @@ use App\Models\Course;
 use App\Models\CourseRequest;
 use App\Models\FreeVideo;
 use App\Models\Member;
+use App\Models\Offer;
 use App\Models\Seo;
 use App\Models\Service;
 use App\Models\ServiceRequest;
@@ -22,7 +23,14 @@ class frontendController extends Controller
         $members = Member::orderBy("id","desc")->take(3)->get();
         $blogs = Blog::orderBy("id","desc")->take(3)->get();
         $seo = Seo::where('page_name','home')->first();
-        return view("frontend.index",compact("testimonials","courses","members","blogs","seo"));
+        $offers = Offer::where('status','active')->orderBy('id', 'desc')->limit(1)->get();
+
+        $offers->transform(function ($offer) {
+            $offer->courses = Course::whereIn('id', $offer->course_ids)->get();
+            return $offer;
+        });
+        
+        return view("frontend.index",compact("testimonials","courses","members","blogs","seo","offers"));
     }
 
     //course 
