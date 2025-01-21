@@ -153,6 +153,25 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="OfferviewModal" tabindex="-1" aria-labelledby="OfferviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="OfferviewModalLabel">Offers Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            @foreach (\App\Models\Offer::where('offer_status', 1)->get() as $key => $dataoff)
+                <p><strong>{{ $key+1 }}&nbsp;)&nbsp;{{ $dataoff->offer_title }}</strong> <span id="viewService">&nbsp;{{ $dataoff->offer_percentage }} % </span></p>
+            @endforeach
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- End Footer -->
     <!-- Jquery 3.7 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -169,6 +188,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custome Js -->
     <script src="{{asset('frontend/assets/js/site.js')}}"></script>
+    <script>
+        $(document).ready(function() {
+            const OfferviewModal = new bootstrap.Modal(document.getElementById('OfferviewModal'));
+            OfferviewModal.show();
+        });
+    </script>
 </body>
 
 </html>
