@@ -378,7 +378,7 @@ nav ul li a:hover {
  */
 .why-choose {
     background-image: url("../img/why-choose.webp");
-    background-position: 100% -170px;
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: auto;
     position: relative;
