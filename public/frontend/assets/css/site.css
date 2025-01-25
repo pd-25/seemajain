@@ -6,7 +6,7 @@
 :root {
     --ff-jost: "Jost", sans-serif;
     --ff-garamond: "Cormorant Garamond", serif;
-    --primary-color: #825574;
+    --primary-color: #412379;
     --secondary-color: #09354E;
 }
 
@@ -99,8 +99,6 @@ p {
 
 .brand {
     height: 60px;
-    background: #543369;
-    padding: 6px;
     border-radius: 3px;
 }
 

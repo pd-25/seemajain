@@ -27,18 +27,17 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChoose">
                             <div class="accordion-body">
-                                <p> Seemma Jain is a highly respected practitioner in the field of spiritual healing and
-                                    mental wellness. With credentials as a Life Coach, Reiki Grand Master, EFT Master
-                                    Practitioner, Past Life Regression Therapist, NLP Practitioner, Angel Healer, and more,
-                                    she has dedicated her life to helping individuals find balance and happiness.
+                                <p> Seemma Jain invites you to embark on a transformative journey where healing meets
+                                    self-discovery. With over 16 years of experience as a globally recognized healer and
+                                    mentor, Seemma integrates time-honored wisdom with contemporary practices to create
+                                    personalized pathways for growth.
                                 </p>
-                                <p>A postgraduate in Public Administration from Panjab University, Seemma transitioned from
-                                    her role as a Centre Manager at NIIT to pursue her true passion—life coaching and
-                                    holistic healing. Her journey has been marked by divine blessings and a deep desire to
-                                    see lives transformed through spiritual modalities.</p>
-                                <p>Seemma has conducted workshops and one-on-one sessions addressing mental health issues
-                                    such as stress, anxiety, physical pain, and relationship challenges. Her client base
-                                    spans across the USA, UK, Canada, Dubai, Australia, Thailand, Uzbekistan, and India.</p>
+                                <p>Her expertise spans Tarot readings, Reiki healing, Angel Therapy, Emotional Freedom
+                                    Techniques (EFT), Zibu symbols, and Past Life Regression (PLR). These transformative
+                                    tools are delivered through tailored sessions and engaging workshops designed to inspire
+                                    clarity, balance, and purpose in your life.</p>
+                                <p>Join Seemma to explore a holistic approach to empowerment and unlock your highest
+                                    potential. Begin your transformation today!</p>
                             </div>
                         </div>
                     </div>
