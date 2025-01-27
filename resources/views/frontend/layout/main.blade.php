@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <title>{{$seo->meta_title ?? 'Seemma Jain'}}</title>
-    
+
     <meta name="description" content="{{$seo->meta_description ?? 'Seemma Jain'}}">
     {{$seo->hederscript ?? ''}}
     <!-- Bootstrap 5.3 -->
@@ -157,6 +157,7 @@
     <!-- Jquery 3.7 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
     <!-- Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
