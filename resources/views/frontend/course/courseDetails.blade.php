@@ -45,14 +45,14 @@
                             {{-- <a href="#" class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost"
                             data-bs-toggle="modal"
                                    data-bs-target="#bookingModal"
-                                   data-id="{{ $course->id }}" 
+                                   data-id="{{ $course->id }}"
                                    data-title="{{ $course->title }}">
                             Book Now</a> --}}
                             <a href="javascript:void(0)"
                             class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost book-now-btn"
                             data-bs-toggle="modal"
                             data-bs-target="#bookingModal"
-                            data-id="{{ $course->id }}" 
+                            data-id="{{ $course->id }}"
                             data-title="{{ $course->title }}">
                             Book Now
                          </a>
@@ -79,7 +79,7 @@
                                         data-bs-target="#tab-03-pane" type="button" role="tab"
                                         aria-controls="tab-03-pane" aria-selected="false">Instructor</button>
                                 </li>
-                                
+
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active p-3" id="tab-01-pane" role="tabpanel"
@@ -146,6 +146,8 @@
         </div>
     </div>
 
+
+
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -167,6 +169,49 @@
             // Handle form submission
             bookingForm.addEventListener('submit', function (e) {
                 e.preventDefault(); // Prevent default form submission
+
+                // Single instance on page.
+                var razorpay = new Razorpay({
+                    key: 'rzp_test_bYsAyhU03AYA4j',
+                    // logo, displayed in the payment processing popup
+                    image: 'http://localhost:8000/frontend/assets/img/logo.png',
+                });
+
+                // Fetching the payment.
+                razorpay.once('ready', function(response) {
+                    console.log(response.methods);
+                });
+
+                // Submitting the data.
+                var data = {
+                    amount: 1000, // in currency subunits. Here 1000 = 1000 paise, which equals to ₹10
+                    currency: "INR", // Default is INR. We support more than 90 currencies.
+                    email: 'test.appmomos@gmail.com',
+                    contact: '9123456780',
+                    notes: {
+                    address: 'Ground Floor, SJR Cyber, Laskar Hosur Road, Bengaluru',
+                    },
+                    // order_id: '123',
+                    method: 'netbanking',
+                    // method specific fields
+                    bank: 'HDFC'
+                };
+
+                // has to be placed within a user-initiated context, such as click, in order for popup to open.
+                razorpay.createPayment(data);
+
+                razorpay.on('payment.success', function(resp) {
+                alert("Payment success.");
+                alert(resp.razorpay_payment_id);
+                alert(resp.razorpay_order_id);
+                alert(resp.razorpay_signature);
+                }); // will pass payment ID, order ID, and Razorpay signature to success handler.
+
+                razorpay.on('payment.error', function(resp) {
+                 alert(resp.error.description);
+                }); // will pass error object to error handler
+
+
 
                 const formData = new FormData(bookingForm);
                 const actionUrl = bookingForm.action;
