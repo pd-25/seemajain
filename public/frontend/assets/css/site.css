@@ -92,14 +92,22 @@ p {
 .header {
     position: relative;
     z-index: 999;
-    padding: 24px 0;
+    padding: 12px 0;
     margin-bottom: -110px;
     border-bottom: 1px solid #8255741A;
 }
 
+.brand-d,
 .brand {
-    height: 60px;
+    padding: 6px 12px;
+    background: #412379;
     border-radius: 3px;
+    display: inline-block;
+}
+
+.brand-d img,
+.brand {
+    height: 48px;
 }
 
 .nav-open {
@@ -133,7 +141,19 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 @media screen and (max-width: 992px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
     .nav-container {
         position: fixed;
         top: 0;
@@ -225,9 +245,11 @@ nav ul li a:hover {
     z-index: 9990;
     opacity: 1;
 }
-#nav:checked~.nav-container{
+
+#nav:checked~.nav-container {
     transform: translateX(0);
 }
+
 #nav:checked~.nav-container ul li a {
     transform: translateY(0);
 }

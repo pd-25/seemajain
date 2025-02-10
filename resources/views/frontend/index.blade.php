@@ -39,7 +39,8 @@
                     <div class="services-content">
                         <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
                             <h2>Empowering Lives, One Soul at a Time</h2>
-                            <p><b>Seemma Jain</b> is a globally renowned spiritual healer and life coach, specializing in Reiki,
+                            <p><b>Seemma Jain</b> is a globally renowned spiritual healer and life coach, specializing in
+                                Reiki,
                                 Tarot, EFT, Past Life Regression, and mental wellness. With 16+ years of experience, she has
                                 transformed lives worldwide through personalized sessions and workshops.</p>
                         </div>
@@ -147,10 +148,14 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="video-tutorial position-relative" data-aos="fade-down" data-aos-duration="500">
-                        <img src="{{ asset('frontend/assets/img/free-tutorial.jpg') }}" class="img-fluid"
-                            alt="Free Tutorial">
-                        <i class="bi bi-play-circle"></i>
+                    <div class="owl-carousel owl-theme video-tutorial-carousel">
+                        <div class="item">
+                            <div class="video-tutorial position-relative" data-aos="fade-down" data-aos-duration="500">
+                                <img src="{{ asset('frontend/assets/img/free-tutorial.jpg') }}" class="img-fluid"
+                                    alt="Free Tutorial">
+                                <i class="bi bi-play-circle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

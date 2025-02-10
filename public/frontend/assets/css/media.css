@@ -1,4 +1,7 @@
 @media (max-width: 1199px) {
+    nav ul li:not(:first-child) {
+        margin-left: 20px;
+    }
     .media-hide {
         display: none;
     }

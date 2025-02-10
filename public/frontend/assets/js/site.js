@@ -27,4 +27,22 @@ $(document).ready(function () {
         dots: true,
         items: 1,
     })
+    // -- Carousel 03
+    $('.video-tutorial-carousel').owlCarousel({
+        loop: true,
+        margin: 24,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
 });
