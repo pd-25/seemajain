@@ -193,7 +193,7 @@ nav ul li a:hover {
     .nav-open {
         position: absolute;
         right: 12px;
-        top: 30px;
+        top: 22px;
         display: block;
         width: 20px;
         height: 14px;
@@ -536,6 +536,8 @@ nav ul li a:hover {
 .blog-img img {
     margin-right: 48px;
     width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 50% 50% 50% 50%;
 }
 
@@ -741,4 +743,56 @@ nav ul li a:hover {
 
 .nav-pills.cdc-tab .nav-link {
     color: var(--secondary-color);
+}
+
+.slick-slider .item {
+    padding: 12px;
+}
+
+button.slick-prev,
+button.slick-next {
+    background: #f7cf58;
+    color: #000000;
+    border: none;
+    width: 100px;
+    border-radius: 50px;
+    padding: 6px;
+    font-size: 14px;
+    position: absolute;
+}
+
+button.slick-prev {
+    left: 0;
+}
+
+button.slick-next {
+    right: 0;
+}
+
+button.slick-prev.slick-disabled,
+button.slick-next.slick-disabled {
+    background: #dbdbdb;
+}
+
+ul.slick-dots {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.slick-dots li {
+    list-style: none;
+}
+
+ul.slick-dots li button {
+    border: none;
+    background: #f2f2f2;
+    margin: 0 1px;
+    font-size: 13px;
+    padding: 0 5px 3px;
+}
+
+ul.slick-dots li.slick-active button {
+    background: #f7cf58;
 }

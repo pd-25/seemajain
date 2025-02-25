@@ -2,6 +2,7 @@
     nav ul li:not(:first-child) {
         margin-left: 20px;
     }
+
     .media-hide {
         display: none;
     }
@@ -44,7 +45,7 @@
     }
 
     .pop-cls-txt {
-        margin: 0 12px;
+        margin: 0 12px 12px;
     }
 
     .blog-img img {
@@ -93,5 +94,13 @@
 
     .page-banner {
         min-height: 280px;
+    }
+
+    .exp-shape img {
+        width: 100%;
+    }
+
+    .banner-content {
+        padding: 124px 0 0;
     }
 }

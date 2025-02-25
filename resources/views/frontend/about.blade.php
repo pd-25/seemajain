@@ -16,76 +16,26 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="accordion accordion-flush position-relative z-3" id="accordionChoose">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                About Seemma Jain
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChoose">
-                            <div class="accordion-body">
-                                <p> Seemma Jain invites you to embark on a transformative journey where healing meets
-                                    self-discovery. With over 16 years of experience as a globally recognized healer and
-                                    mentor, Seemma integrates time-honored wisdom with contemporary practices to create
-                                    personalized pathways for growth.
-                                </p>
-                                <p>Her expertise spans Tarot readings, Reiki healing, Angel Therapy, Emotional Freedom
-                                    Techniques (EFT), Zibu symbols, and Past Life Regression (PLR). These transformative
-                                    tools are delivered through tailored sessions and engaging workshops designed to inspire
-                                    clarity, balance, and purpose in your life.</p>
-                                <p>Join Seemma to explore a holistic approach to empowerment and unlock your highest
-                                    potential. Begin your transformation today!</p>
-                            </div>
-                        </div>
+            <div class="col-md-7">
+                <div class="card border-0" data-aos="fade-up" data-aos-duration="500">
+                    <div class="card-body">
+                        <p> Seemma Jain is a global expert in spiritual healing and mental wellness, known for blending
+                            ancient wisdom with modern techniques to create powerful transformative experiences. Her
+                            credentials include being a Life Coach, Reiki Grand Master, EFT Master Practitioner, Past Life
+                            Regression Therapist, NLP Practitioner, Angel Healer, and more. With over 16 years of
+                            experience, Seemma has helped individuals from across the globe, including the USA, UK, Canada,
+                            Dubai, and India, overcome life’s challenges and achieve emotional balance and clarity.
+                        </p>
+                        <p>Her work has earned her accolades such as the Gyan Kalash Award in 2021 and 2022 for "Best Past
+                            Life Regression Therapist." Seemma has also been featured on Red FM Nagpur's "Ye Taare Woh
+                            Taare" and presented on NLP at The Taj Gateway, Pushkar in 2018. These achievements reflect her
+                            dedication to empowering others and her excellence in the field of holistic healing.
+                        </p>
+                        <p>Join her vibrant online community of over 81K followers on Instagram (@jainseemma) or explore her
+                            YouTube channel for inspiring content designed to guide you toward clarity, purpose, and
+                            happiness. Whether through personalized sessions or engaging workshops, Seemma’s approach is
+                            always rooted in compassion and a deep commitment to transformation.</p>
                     </div>
-                    {{-- <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Live classes with recordings
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
-                        <div class="accordion-body">
-                            <p>Incase, you missed your class just relax. We've your back with
-                                recordings available for lifetime. PDF and notes also available in both English and
-                                Hindi.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Life-time handholding
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
-                        <div class="accordion-body">
-                            <p>Once the course is competeted we'll help you to become professional
-                                with life time guidance and support. Enroll for spirituality courses online now.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Certified World - class courses
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
-                        <div class="accordion-body">
-                            <p>I've over 20+ years of experience in my Spiritual journey. I deliver
-                                what I received from the higher energies. Switchwords expertise transformed
-                                thousands of
-                                souls.</p>
-                        </div>
-                    </div>
-                </div> --}}
                 </div>
             </div>
         </div>

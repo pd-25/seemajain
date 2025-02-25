@@ -52,19 +52,24 @@
                                             alt="Switch Word">
                                     </div>
                                     <div class="ser-txt">
-                                        <h6>Switch Word</h6>
-                                        <p>Learn from us</p>
+                                        <h6>Discover Your Potential</h6>
+                                        <p>Seemma Jain empowers individuals to break free from limitations. With expertise
+                                            in life coaching, Reiki, and mental wellness practices, she guides clients to
+                                            uncover their strengths and embrace transformative growth.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                                     <div class="ser-icon">
-                                        <img src="assets/img/love-yourself.png" width="62" alt="Your Self">
+                                        <img src="{{ asset('frontend/assets/img/love-yourself.png') }}" width="62"
+                                            alt="Your Self">
                                     </div>
                                     <div class="ser-txt">
-                                        <h6>Your Self</h6>
-                                        <p>Learn from us</p>
+                                        <h6>Your Self, Reimagined</h6>
+                                        <p>As a dedicated healer, Seemma addresses challenges like stress, anxiety, and
+                                            emotional blocks. Through her personalized sessions, she helps clients
+                                            rediscover clarity, balance, and purpose in life.</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,8 +80,10 @@
                                             alt="Transformed">
                                     </div>
                                     <div class="ser-txt">
-                                        <h6>Transformed</h6>
-                                        <p>Learn from us</p>
+                                        <h6>Transformed Lives, Global Reach</h6>
+                                        <p>With a global presence spanning the USA, UK, Canada, and beyond, Seemma’s
+                                            workshops and sessions have transformed countless lives. Her methods combine
+                                            ancient wisdom with contemporary healing techniques.</p>
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +94,10 @@
                                             alt="Transformed">
                                     </div>
                                     <div class="ser-txt">
-                                        <h6>Design your Life</h6>
-                                        <p>Learn from us</p>
+                                        <h6>Design Your Life</h6>
+                                        <p>Through techniques like Past Life Regression, EFT, and Angel Healing, Seemma
+                                            inspires clients to take control of their journey. Her approach is designed to
+                                            unlock potential and lead to lasting transformation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -104,9 +113,6 @@
     <!-- End Services -->
     <!-- Popular Classes Section -->
     <section class="popular-classes sec">
-        <div class="pop-cls-shape left">
-            <img src="{{ asset('frontend/assets/img/shape/pop-cls-shape.png') }}" width="250" alt="Shape">
-        </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -115,7 +121,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="owl-carousel owl-theme pop-cls-carousel">
+                    <div class="slick-slider" id="popClsCarousel">
                         @foreach ($courses as $course)
                             <div class="item">
                                 <div class="pop-cls-img">
@@ -148,7 +154,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="owl-carousel owl-theme video-tutorial-carousel">
+                    <div class="slick-slider" id="videoTutorialCarousel">
                         <div class="item">
                             <div class="video-tutorial position-relative" data-aos="fade-down" data-aos-duration="500">
                                 <img src="{{ asset('frontend/assets/img/free-tutorial.jpg') }}" class="img-fluid"
@@ -165,30 +171,28 @@
     <!-- Testionials Section -->
     <section class="testimonials sec">
         <div class="testimonial-background-overlay"></div>
-        <div class="d-flex align-items-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
-                            <h2>What Our Client Says</h2>
-                        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
+                        <h2>What Our Client Says</h2>
                     </div>
-                    <div class="col-sm-10">
-                        <div class="owl-carousel owl-theme testimonial-carousel">
-                            @foreach ($testimonials as $testimonial)
-                                <div class="item text-center">
-                                    <div class="testi-txt">
-                                        <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
-                                        <div class="tisti-img">
-                                            <img src="{{ asset('storage/' . $testimonial->image_path) }}"
-                                                alt="{{ $testimonial->name }}">
-                                        </div>
-                                        <h5>{{ $testimonial->name }}</h5>
-                                        <p>{{ $testimonial->location }}</p>
+                </div>
+                <div class="col-sm-10">
+                    <div class="slick-slider" id="testimonialCarousel">
+                        @foreach ($testimonials as $testimonial)
+                            <div class="item text-center">
+                                <div class="testi-txt">
+                                    <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
+                                    <div class="tisti-img">
+                                        <img src="{{ asset('storage/' . $testimonial->image_path) }}"
+                                            alt="{{ $testimonial->name }}">
                                     </div>
+                                    <h5>{{ $testimonial->name }}</h5>
+                                    <p>{{ $testimonial->location }}</p>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -236,19 +240,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <div class="accordion accordion-flush position-relative z-3" id="accordionChoose">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                One on one interaction
+                                Personalized Guidance
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionChoose">
                             <div class="accordion-body">
-                                <p> Best part to join courses like Switchwords is that even in a group we
-                                    get chance to interact and solve all our queries. Learn remedies for mental health.
+                                <p class="mb-0">One-on-one sessions tailored to your unique journey of transformation and
+                                    self-discovery.
                                 </p>
                             </div>
                         </div>
@@ -257,14 +261,15 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Live classes with recordings
+                                Holistic Expertise
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
                             <div class="accordion-body">
-                                <p>Incase, you missed your class just relax. We've your back with
-                                    recordings available for lifetime. PDF and notes also available in both English and
-                                    Hindi.</p>
+                                <p class="mb-0">Mastery in Tarot, Reiki, Angel Healing, Zibu Symbols, EFT, Mental
+                                    Wellness, and PLR for
+                                    comprehensive healing.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -272,13 +277,13 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Life-time handholding
+                                Transformative Workshops
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
                             <div class="accordion-body">
-                                <p>Once the course is competeted we'll help you to become professional
-                                    with life time guidance and support. Enroll for spirituality courses online now.</p>
+                                <p class="mb-0">Engaging group courses fostering growth, healing, and collective
+                                    learning.</p>
                             </div>
                         </div>
                     </div>
@@ -286,15 +291,93 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Certified World - class courses
+                                Proven Success
                             </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
                             <div class="accordion-body">
-                                <p>I've over 20+ years of experience in my Spiritual journey. I deliver
-                                    what I received from the higher energies. Switchwords expertise transformed
-                                    thousands of
-                                    souls.</p>
+                                <p class="mb-0">16+ years of experience with global clients and glowing testimonials.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Direct Communication
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">Personal, approachable guidance with no third-party involvement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Safe & Confidential
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">A non-judgmental space ensuring privacy and trust.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Award-Winning
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">Honored with prestigious accolades like the “Gyan Kalash Award.”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Global Reach
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">Trusted by clients worldwide, including the USA, UK, Canada, and Dubai.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Effective Techniques
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">Practical methods to overcome stress, anxiety, phobias, and emotional
+                                    blocks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                Lasting Impact
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionChoose">
+                            <div class="accordion-body">
+                                <p class="mb-0">Empowering individuals to unlock potential, heal deeply, and
+                                    live balanced lives.</p>
                             </div>
                         </div>
                     </div>
