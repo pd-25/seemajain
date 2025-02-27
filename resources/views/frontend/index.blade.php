@@ -113,7 +113,7 @@
     <!-- End Services -->
     <!-- Popular Classes Section -->
     <section class="popular-classes sec">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
