@@ -7,7 +7,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-lg-5">
                     <div class="banner-content">
-                        <h1 data-aos="fade-down" data-aos-duration="3000">Welcome1123 to Your Journey of Transformation</h1>
+                        <h1 data-aos="fade-down" data-aos-duration="3000">Welcome to Your Journey of Transformation</h1>
                         <p data-aos="fade-right" data-aos-duration="3000" class="mb-0">"Discover clarity, balance, and
                             purpose with Seemma Jain, a globally acclaimed healer blending ancient wisdom and modern
                             practices. Transform your life through personalized sessions and workshops. Start your journey
