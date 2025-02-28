@@ -42,7 +42,7 @@
     </section>
     <!-- End Why Choose -->
     <!-- Our Expert Trainers Section -->
-    <section class="expert-trainers sec position-relative">
+    {{-- <section class="expert-trainers sec position-relative">
         <div class="container position-relative z-3">
             <div class="row">
                 <div class="col-12 text-center">
@@ -70,7 +70,7 @@
         <div class="exp-shape">
             <img src="{{ asset('frontend/assets/img/shape/expert-shape.png') }}" alt="shape">
         </div>
-    </section>
+    </section> --}}
     <!-- End Our Expert Trainers -->
     <!-- Services Section -->
     <section class="services">
