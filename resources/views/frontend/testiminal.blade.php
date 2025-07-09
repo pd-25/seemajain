@@ -36,10 +36,9 @@
     </div>
 </section>
 <!-- End Free Classes -->
-<!-- Testionials Section -->
-<section class="testimonials sec">
-    <div class="testimonial-background-overlay"></div>
-    <div class="d-flex align-items-center">
+    <!-- Testionials Section -->
+    <section class="testimonials sec">
+        <div class="testimonial-background-overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
@@ -48,26 +47,26 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <div class="owl-carousel owl-theme testimonial-carousel">
+                    <div class="slick-slider" id="testimonialCarousel">
                         @foreach ($testimonials as $testimonial)
-                        <div class="item text-center">
-                            <div class="testi-txt">
-                                <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
-                                <div class="tisti-img">
-                                    <img src="{{asset('storage/'.$testimonial->image_path)}}" alt="{{ $testimonial->name }}">
+                            <div class="item text-center">
+                                <div class="testi-txt">
+                                    <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
+                                    <div class="tisti-img">
+                                        <img src="{{ asset('storage/' . $testimonial->image_path) }}"
+                                            alt="{{ $testimonial->name }}">
+                                    </div>
+                                    <h5>{{ $testimonial->name }}</h5>
+                                    <p>{{ $testimonial->location }}</p>
                                 </div>
-                                <h5>{{ $testimonial->name }}</h5>
-                                <p>{{ $testimonial->location }}</p>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Testimonials -->
+    </section>
+    <!-- End Testimonials -->
 <!-- Google Testionials Section -->
 <section class="sec">
     <div class="container">

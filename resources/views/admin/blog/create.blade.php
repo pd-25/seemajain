@@ -1,6 +1,14 @@
 @extends('admin.layout.main')
 @section('title', 'Create Blog | ')
 @section('content')
+
+<style>
+    .ck-editor__editable {
+        min-height: 200px;
+    }
+</style>
+
+
     <section class="section dashboard">
 
         <div class="row">
@@ -40,7 +48,7 @@
                             <div class="row mb-3">
                                 <label for="description" class="col-sm-2 col-form-label">Description</label>
                                 <div class="col-sm-10">
-                                    <textarea name="description" class="form-control" rows="5" required></textarea>
+                                    <textarea id="description" name="description" class="form-control" rows="5" required></textarea>
                                     @error('description')
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -100,4 +108,13 @@
             </div>
         </div>
     </section>
+
+    <!-- CKEditor 5 Classic Build (latest CDN) -->
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#description'))
+        .catch(error => console.error(error));
+</script>
+
 @endsection

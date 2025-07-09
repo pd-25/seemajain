@@ -137,9 +137,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:void(0)" class="ma-btn ma-btn-primary mt-4" data-aos="zoom-in-left"
+                        <!-- <a href="javascript:void(0)" class="ma-btn ma-btn-primary mt-4" data-aos="zoom-in-left"
                             data-aos-duration="3000">Know
-                            More</a>
+                            More</a> -->
                     </div>
                 </div>
             </div>
@@ -149,30 +149,28 @@
     <!-- Testionials Section -->
     <section class="testimonials sec">
         <div class="testimonial-background-overlay"></div>
-        <div class="d-flex align-items-center">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
-                            <h2>What Our Client Says</h2>
-                        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
+                        <h2>What Our Client Says</h2>
                     </div>
-                    <div class="col-sm-10">
-                        <div class="owl-carousel owl-theme testimonial-carousel">
-                            @foreach ($testimonials as $testimonial)
-                                <div class="item text-center">
-                                    <div class="testi-txt">
-                                        <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
-                                        <div class="tisti-img">
-                                            <img src="{{ asset('storage/' . $testimonial->image_path) }}"
-                                                alt="{{ $testimonial->name }}">
-                                        </div>
-                                        <h5>{{ $testimonial->name }}</h5>
-                                        <p>{{ $testimonial->location }}</p>
+                </div>
+                <div class="col-sm-10">
+                    <div class="slick-slider" id="testimonialCarousel">
+                        @foreach ($testimonials as $testimonial)
+                            <div class="item text-center">
+                                <div class="testi-txt">
+                                    <p class="mb-4"><q>{{ $testimonial->description }}</q></p>
+                                    <div class="tisti-img">
+                                        <img src="{{ asset('storage/' . $testimonial->image_path) }}"
+                                            alt="{{ $testimonial->name }}">
                                     </div>
+                                    <h5>{{ $testimonial->name }}</h5>
+                                    <p>{{ $testimonial->location }}</p>
                                 </div>
-                            @endforeach
-                        </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

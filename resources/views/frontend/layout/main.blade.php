@@ -9,7 +9,7 @@
     <title>{{ $seo->meta_title ?? 'Seemma Jain' }}</title>
 
     <meta name="description" content="{{ $seo->meta_description ?? 'Seemma Jain' }}">
-    {{ $seo->hederscript ?? '' }}
+    <!-- {{ $seo->hederscript ?? '' }} -->
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,11 +22,19 @@
     <!-- Custome Css -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/site.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/media.css') }}">
+    <style>
+        .scrolled {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.6);
+            /* or darker for dark theme */
+        }
+    </style>
 </head>
 
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <header id="mainHeader" class="header" style="position: sticky; top: 0; background-color: transparent; transition: background-color 0.3s, backdrop-filter 0.3s;">
         <div class="container">
             <div class="desktop-menu">
                 <div class="row align-items-center">
@@ -105,7 +113,7 @@
                 </div>
             </div>
             <div class="row mb-5">
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="foot-sec">
                         <h5>Working Hours</h5>
                         <ul>
@@ -123,8 +131,8 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-md-3">
+                </div> -->
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Useful Links</h5>
                         <ul>
@@ -143,26 +151,26 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Popular Services</h5>
                         <ul>
                             <li>
-                                <a href="#">Health Yoga Class</a>
+                                <a href="{{ route('services') }}">Health Yoga Class</a>
                             </li>
                             <li>
-                                <a href="#">Power Yoga Class</a>
+                                <a href="{{ route('services') }}">Power Yoga Class</a>
                             </li>
                             <li>
-                                <a href="#">Pregnancy Yoga</a>
+                                <a href="{{ route('services') }}">Pregnancy Yoga</a>
                             </li>
                             <li>
-                                <a href="#">Dynamic Meditation</a>
+                                <a href="{{ route('services') }}">Dynamic Meditation</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Contact Us</h5>
                         <p><i class="bi bi-geo-alt me-2"></i> 121 Kingt Melbourne VIC 3000, Australia</p>
@@ -194,6 +202,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custome Js -->
     <script src="{{ asset('frontend/assets/js/site.js') }}"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
