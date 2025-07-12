@@ -9,7 +9,7 @@
     <title>{{ $seo->meta_title ?? 'Seemma Jain' }}</title>
 
     <meta name="description" content="{{ $seo->meta_description ?? 'Seemma Jain' }}">
-    {{ $seo->hederscript ?? '' }}
+    <!-- {{ $seo->hederscript ?? '' }} -->
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,11 +22,45 @@
     <!-- Custome Css -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/site.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/media.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .scrolled {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.6);
+            /* or darker for dark theme */
+        }
+
+            .whatsapp-float{
+        position:fixed;
+        right:20px;
+        bottom:20px;
+        width:60px;
+        height:60px;
+        background:#412379;
+        color:#fff;
+        border-radius:50%;
+        text-align:center;
+        font-size:32px;
+        line-height:60px;
+        box-shadow:0 2px 5px rgba(0,0,0,.3);
+        transition:background .2s;
+        z-index:1000;
+    }
+    .whatsapp-float:hover{
+        background:#1ebe57;
+        text-decoration:none;
+        color:#fff;
+    }
+    </style>
+
+
 </head>
 
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <header id="mainHeader" class="header" style="position: sticky; top: 0; background-color: transparent; transition: background-color 0.3s, backdrop-filter 0.3s;">
         <div class="container">
             <div class="desktop-menu">
                 <div class="row align-items-center">
@@ -107,19 +141,19 @@
             <div class="row mb-5">
                 <div class="col-md-3">
                     <div class="foot-sec">
-                        <h5>Working Hours</h5>
+                        <h5>Social Handles</h5>
                         <ul>
                             <li>
-                                <a href="#">Monday - Thursday : 7 am - 8 pm</a>
+                                <a href="#">Facebook</a>
                             </li>
                             <li>
-                                <a href="#">Friday : 7 am - 6 pm</a>
+                                <a href="#">Instagram</a>
                             </li>
                             <li>
-                                <a href="#">Saturday : 7 am - 7 pm</a>
+                                <a href="#">Twitter</a>
                             </li>
                             <li>
-                                <a href="#">Sunday : 7 am - 12 pm</a>
+                                <a href="#">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
@@ -148,16 +182,16 @@
                         <h5>Popular Services</h5>
                         <ul>
                             <li>
-                                <a href="#">Health Yoga Class</a>
+                                <a href="{{ route('services') }}">Health Yoga Class</a>
                             </li>
                             <li>
-                                <a href="#">Power Yoga Class</a>
+                                <a href="{{ route('services') }}">Power Yoga Class</a>
                             </li>
                             <li>
-                                <a href="#">Pregnancy Yoga</a>
+                                <a href="{{ route('services') }}">Pregnancy Yoga</a>
                             </li>
                             <li>
-                                <a href="#">Dynamic Meditation</a>
+                                <a href="{{ route('services') }}">Dynamic Meditation</a>
                             </li>
                         </ul>
                     </div>
@@ -181,6 +215,14 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Flotting button -->
+    <a href="https://wa.me/"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Jquery 3.7 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap 5.3 -->
@@ -194,6 +236,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custome Js -->
     <script src="{{ asset('frontend/assets/js/site.js') }}"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
 </body>
 
 </html>
