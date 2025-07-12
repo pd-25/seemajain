@@ -17,9 +17,9 @@
                             step toward a more empowered you?</p>
                         <p data-aos="fade-right" data-aos-duration="3000" class="fw-bold">Start Your Healing Journey Today.
                         </p>
-                        <a href="javascript:void(0)" class="ma-btn ma-btn-primary me-4" data-aos="fade-down-right"
+                        <a href="{{route('course')}}" class="ma-btn ma-btn-primary me-4" data-aos="fade-down-right"
                             data-aos-duration="3000">Browse Courses</a>
-                        <a href="javascript:void(0)" class="ma-btn ma-btn-secondary" data-aos="fade-down-left"
+                        <a href="{{route('about')}}" class="ma-btn ma-btn-secondary" data-aos="fade-down-left"
                             data-aos-duration="3000">Learn More</a>
                     </div>
                 </div>
