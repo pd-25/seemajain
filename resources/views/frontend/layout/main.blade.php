@@ -22,6 +22,8 @@
     <!-- Custome Css -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/site.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/media.css') }}">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <style>
         .scrolled {
             backdrop-filter: blur(10px);
@@ -29,7 +31,31 @@
             background-color: rgba(255, 255, 255, 0.6);
             /* or darker for dark theme */
         }
+
+            .whatsapp-float{
+        position:fixed;
+        right:20px;
+        bottom:20px;
+        width:60px;
+        height:60px;
+        background:#412379;
+        color:#fff;
+        border-radius:50%;
+        text-align:center;
+        font-size:32px;
+        line-height:60px;
+        box-shadow:0 2px 5px rgba(0,0,0,.3);
+        transition:background .2s;
+        z-index:1000;
+    }
+    .whatsapp-float:hover{
+        background:#1ebe57;
+        text-decoration:none;
+        color:#fff;
+    }
     </style>
+
+
 </head>
 
 <body>
@@ -113,26 +139,26 @@
                 </div>
             </div>
             <div class="row mb-5">
-                <!-- <div class="col-md-3">
+                <div class="col-md-3">
                     <div class="foot-sec">
-                        <h5>Working Hours</h5>
+                        <h5>Social Handles</h5>
                         <ul>
                             <li>
-                                <a href="#">Monday - Thursday : 7 am - 8 pm</a>
+                                <a href="#">Facebook</a>
                             </li>
                             <li>
-                                <a href="#">Friday : 7 am - 6 pm</a>
+                                <a href="#">Instagram</a>
                             </li>
                             <li>
-                                <a href="#">Saturday : 7 am - 7 pm</a>
+                                <a href="#">Twitter</a>
                             </li>
                             <li>
-                                <a href="#">Sunday : 7 am - 12 pm</a>
+                                <a href="#">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
-                </div> -->
-                <div class="col-md-4">
+                </div>
+                <div class="col-md-3">
                     <div class="foot-sec">
                         <h5>Useful Links</h5>
                         <ul>
@@ -151,7 +177,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="foot-sec">
                         <h5>Popular Services</h5>
                         <ul>
@@ -170,7 +196,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="foot-sec">
                         <h5>Contact Us</h5>
                         <p><i class="bi bi-geo-alt me-2"></i> 121 Kingt Melbourne VIC 3000, Australia</p>
@@ -189,6 +215,14 @@
         </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Flotting button -->
+    <a href="https://wa.me/"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
     <!-- Jquery 3.7 -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap 5.3 -->
