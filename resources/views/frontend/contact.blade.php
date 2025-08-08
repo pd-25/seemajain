@@ -16,7 +16,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Address</h4>
-                            <p>75/23 Folsom Ave, Suite 600 San Francisco, CA 94107 </p>
+                            <p>121 Kingt Melbourne VIC 3000, Australia</p>
                         </div>
                     </div>
                 </div>
@@ -27,8 +27,8 @@
                         </div>
                         <div class="contact-text">
                             <h4>Phone Number</h4>
-                            <p><a href="tel:+88 (0) 101 0000 000">+88 (0) 101 0000 000</a></p>
-                            <p><a href="tel:+88 (0) 101 0000 000">+88 (0) 101 0000 000</a></p>
+                            <p><a href="tel:+91 98201 27053">+91 98201 27053</a></p>
+                            <!-- <p><a href="tel:+91 98201 27053">+91 98201 27053</a></p> -->
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,8 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email Address</h4>
-                            <p><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
-                            <p><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></p>
+                            <p><a href="mailto:info@yourdomain.com">anubhoooti17@gmail.com</a></p>
+                            <!-- <p><a href="mailto:name@yourdomain.com">anubhoooti17@gmail.com</a></p> -->
                         </div>
                     </div>
                 </div>

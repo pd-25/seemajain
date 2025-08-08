@@ -144,16 +144,16 @@
                         <h5>Social Handles</h5>
                         <ul>
                             <li>
-                                <a href="#">Facebook</a>
+                                <i class="bi bi-facebook me-2"></i><a href="#">Facebook</a>
                             </li>
                             <li>
-                                <a href="#">Instagram</a>
+                                <i class="bi bi-instagram me-2"></i><a href="#">Instagram</a>
                             </li>
                             <li>
-                                <a href="#">Twitter</a>
+                                <i class="bi bi-twitter me-2"></i><a href="#">Twitter</a>
                             </li>
                             <li>
-                                <a href="#">LinkedIn</a>
+                                <i class="bi bi-linkedin me-2"></i><a href="#">LinkedIn</a>
                             </li>
                         </ul>
                     </div>

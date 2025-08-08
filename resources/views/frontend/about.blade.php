@@ -91,7 +91,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="500">
                                     <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/word-of-mouth.png') }}" width="62"
+                                        <img src="{{ asset('./assets/img/cards.jpg') }}" width="62"
                                             alt="Switch Word">
                                     </div>
                                     <div class="ser-txt">
@@ -103,7 +103,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000">
                                     <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/love-yourself.png') }}" width="62"
+                                        <img src="{{ asset('./assets/img/eb.jpg') }}" width="62"
                                             alt="Your Self">
                                     </div>
                                     <div class="ser-txt">
@@ -115,7 +115,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="2000">
                                     <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/origin.png') }}" width="62"
+                                        <img src="{{ asset('./assets/img/engel.jpg') }}" width="62"
                                             alt="Transformed">
                                     </div>
                                     <div class="ser-txt">
@@ -127,7 +127,7 @@
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="3000">
                                     <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/quality-of-life.png') }}" width="62"
+                                        <img src="{{ asset('./assets/img/one-to-one.jpg') }}" width="62"
                                             alt="Transformed">
                                     </div>
                                     <div class="ser-txt">
