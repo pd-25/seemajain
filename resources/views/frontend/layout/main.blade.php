@@ -139,7 +139,7 @@
                 </div>
             </div>
             <div class="row mb-5">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Social Handles</h5>
                         <ul>
@@ -149,16 +149,16 @@
                             <li>
                                 <a href="#">Instagram</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#">Twitter</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#">LinkedIn</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Useful Links</h5>
                         <ul>
@@ -177,7 +177,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="foot-sec">
                         <h5>Popular Services</h5>
                         <ul>
@@ -195,11 +195,11 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="col-md-3">
+                </div> -->
+                <div class="col-md-4">
                     <div class="foot-sec">
                         <h5>Contact Us</h5>
-                        <p><i class="bi bi-geo-alt me-2"></i> 121 Kingt Melbourne VIC 3000, Australia</p>
+                        <!-- <p><i class="bi bi-geo-alt me-2"></i> 121 Kingt Melbourne VIC 3000, Australia</p> -->
                         <p><i class="bi bi-telephone me-2"></i> +91 98201 27053</p>
                         <p><i class="bi bi-envelope me-2"></i> anubhoooti17@gmail.com</p>
                     </div>

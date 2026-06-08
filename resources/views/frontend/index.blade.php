@@ -392,7 +392,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="sec-header" data-aos="fade-up" data-aos-duration="1000">
-                        <h2>Recent News From The Blog</h2>
+                        <h2>Blog</h2>
                     </div>
                 </div>
             </div>
@@ -405,10 +405,10 @@
                                     <img src="{{ asset('storage/' . $blog->image_path) }}" alt="{{ $blog->title }}">
                                 </div>
                                 <div class="blog-text">
-                                    <p><i class="bi bi-calendar-week me-2"></i>
+                                    <!-- <p><i class="bi bi-calendar-week me-2"></i>
                                         {{ $blog->created_at->isoFormat('Do MMMM YYYY') }} <i
                                             class="bi bi-layers ms-3 me-2"></i>Vinyasa Yoga
-                                    </p>
+                                    </p> -->
                                     <h5>{{ $blog->title }}</h5>
                                 </div>
                             </a>
