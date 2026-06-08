@@ -34,11 +34,11 @@
                                         Language</div>
                                     <div class="ma-color fw-bold">{{ $course->language }}</div>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between">
+                                <!-- <li class="list-group-item d-flex justify-content-between">
                                     <div><i class="bi bi-clipboard-check"></i>
                                         Assessments</div>
                                     <div class="ma-color fw-bold">{{ $course->assessments }}</div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <div class="text-center mt-3">
