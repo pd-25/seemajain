@@ -102,9 +102,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:void(0)" class="ma-btn ma-btn-primary mt-4" data-aos="zoom-in-left"
+                        <!-- <a href="javascript:void(0)" class="ma-btn ma-btn-primary mt-4" data-aos="zoom-in-left"
                             data-aos-duration="3000">Know
-                            More</a>
+                            More</a> -->
                     </div>
                 </div>
             </div>

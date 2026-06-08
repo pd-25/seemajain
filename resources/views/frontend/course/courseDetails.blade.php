@@ -24,11 +24,11 @@
                                     <div><i class="bi bi-clock me-2"></i>Duration</div>
                                     <div class="ma-color fw-bold">{{ $course->duration }}</div>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between">
+                                <!-- <li class="list-group-item d-flex justify-content-between">
                                     <div><i class="bi bi-bookmark-star"></i>
                                         Skill level</div>
                                     <div class="ma-color fw-bold">{{ $course->skill_level }}</div>
-                                </li>
+                                </li> -->
                                 <li class="list-group-item d-flex justify-content-between">
                                     <div><i class="bi bi-translate"></i>
                                         Language</div>
@@ -74,11 +74,11 @@
                                         data-bs-target="#tab-02-pane" type="button" role="tab"
                                         aria-controls="tab-02-pane" aria-selected="false">Curriculum</button>
                                 </li>
-                                <li class="nav-item" role="presentation">
+                                <!-- <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="tab-03" data-bs-toggle="tab"
                                         data-bs-target="#tab-03-pane" type="button" role="tab"
                                         aria-controls="tab-03-pane" aria-selected="false">Instructor</button>
-                                </li>
+                                </li> -->
 
                             </ul>
                             <div class="tab-content" id="myTabContent">
