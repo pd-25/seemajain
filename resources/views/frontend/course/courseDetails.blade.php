@@ -16,7 +16,7 @@
                             <img src="{{asset('storage/'.$course->image)}}" alt="{{ $course->title }}">
                         </div>
                         <div class="cdh-header my-3 text-center">
-                            <h2 class="m-0">₹{{$course->regular_price}} <small><del>₹{{$course->sale_price}}</del></small></h2>
+                            <h2 class="m-0">₹{{$course->sale_price}} <small><del>₹{{$course->regular_price}}</del></small></h2>
                         </div>
                         <div class="cdh-list">
                             <ul class="list-group list-group-flush ff-jost">
