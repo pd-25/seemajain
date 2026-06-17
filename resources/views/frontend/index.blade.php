@@ -1,26 +1,151 @@
 @extends('frontend.layout.main')
 @section('content')
     <!-- Banner Section -->
-    <section class="banner">
+    <section class="banner d-flex align-items-center">
         <div class="banner-overlay"></div>
-        <div class="container h-100 position-relative z-3">
-            <div class="row h-100 align-items-center">
-                <div class="col-lg-5">
+        <div class="container position-relative z-3">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
                     <div class="banner-content">
-                        <h1 data-aos="fade-down" data-aos-duration="3000">Welcome to Your Journey <br> of Transformation</h1>
-                        <p data-aos="fade-right" data-aos-duration="3000" class="mb-0">"Discover clarity, balance, and
+                        <div class="banner-eyebrow" data-aos="fade-down" data-aos-duration="1000">TRANSFORM YOUR LIFE ✦</div>
+                        <h1 data-aos="fade-down" data-aos-duration="2000">Welcome to Your Journey <br> of Transformation</h1>
+                        <p data-aos="fade-right" data-aos-duration="2000" class="mb-4">"Discover clarity, balance, and
                             purpose with Seemma Jain, a globally acclaimed healer blending ancient wisdom and modern
                             practices. Transform your life through personalized sessions and workshops. Start your journey
-                            toward <br> empowerment today!"</p>
-                        <p data-aos="fade-right" data-aos-duration="3000" class="fw-bold mb-0">Are you ready to take the
-                            first
-                            step toward a more empowered you?</p>
-                        <p data-aos="fade-right" data-aos-duration="3000" class="fw-bold">Start Your Healing Journey Today.
-                        </p>
-                        <a href="#popularcourses" class="ma-btn ma-btn-primary me-4" data-aos="fade-down-right"
-                            data-aos-duration="3000">Browse Courses</a>
-                        <!-- <a href="javascript:void(0)" class="ma-btn ma-btn-secondary" data-aos="fade-down-left"
-                            data-aos-duration="3000">Learn More</a> -->
+                            toward empowerment today!"</p>
+                        <p data-aos="fade-right" data-aos-duration="2500" class="fw-bold mb-2">Are you ready to take the
+                            first step toward a more empowered you?</p>
+                        <p data-aos="fade-right" data-aos-duration="2500" class="fw-bold mb-4">Start Your Healing Journey Today.</p>
+                        
+                        <div class="d-flex flex-wrap gap-3 align-items-center" data-aos="fade-up" data-aos-duration="3000">
+                            <a href="#popularcourses" class="btn-primary-custom">Browse Courses &rarr;</a>
+                            <a href="javascript:void(0)" class="btn-outline-custom"><i class="bi bi-play-circle-fill me-2"></i> Watch Free Session</a>
+                        </div>
+                        
+                        <div class="banner-rating mt-5" data-aos="fade-up" data-aos-duration="3000">
+                            <div class="stars mb-1">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-0 text-muted" style="font-family: var(--ff-jost); font-size: 14px;">Trusted by 10,000+ Students Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="banner-image-wrapper position-relative">
+                        <div class="banner-glow-circle"></div>
+                        <img src="{{ asset('frontend/assets/img/banner/banner-img.webp') }}" class="img-fluid position-relative z-2 main-portrait" alt="Seemma Jain" data-aos="zoom-in" data-aos-duration="2000" style="border-radius: 20px;">
+                        
+                        <!-- Floating Cards -->
+                        <div class="floating-card fc-1" data-aos="fade-down" data-aos-duration="2500">
+                            <div class="fc-icon"><i class="bi bi-heart"></i></div>
+                            <div class="fc-text"><strong>25+</strong><br>Years Experience</div>
+                        </div>
+                        <div class="floating-card fc-2" data-aos="fade-left" data-aos-duration="2500">
+                            <div class="fc-icon"><i class="bi bi-globe"></i></div>
+                            <div class="fc-text"><strong>Global</strong><br>Clients Worldwide</div>
+                        </div>
+                        <div class="floating-card fc-3" data-aos="fade-right" data-aos-duration="2500">
+                            <div class="fc-icon"><i class="bi bi-award"></i></div>
+                            <div class="fc-text"><strong>Certified</strong><br>Spiritual Mentor</div>
+                        </div>
+                        <div class="floating-card fc-4" data-aos="fade-up" data-aos-duration="2500">
+                            <div class="fc-icon"><i class="bi bi-book"></i></div>
+                            <div class="fc-text"><strong>100+</strong><br>Workshops Conducted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="banner-stats py-4 bg-white position-relative z-3" style="border-radius: 20px; margin-top: -50px; margin-bottom: 50px; max-width: 1140px; margin-left: auto; margin-right: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-3 mb-md-0 stat-item border-end">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <i class="bi bi-people text-primary fs-2 mb-2 mb-md-0 me-md-3" style="color: #6a4b8c !important;"></i>
+                        <div class="text-center text-md-start">
+                            <h4 class="mb-0 fw-bold" style="color: var(--primary-color); font-family: var(--ff-jost);">5000+</h4>
+                            <p class="mb-0 text-muted" style="font-size: 13px; font-family: var(--ff-jost); line-height: 1.2;">Students<br>Empowered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 mb-md-0 stat-item border-end">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <i class="bi bi-book text-primary fs-2 mb-2 mb-md-0 me-md-3" style="color: #6a4b8c !important;"></i>
+                        <div class="text-center text-md-start">
+                            <h4 class="mb-0 fw-bold" style="color: var(--primary-color); font-family: var(--ff-jost);">100+</h4>
+                            <p class="mb-0 text-muted" style="font-size: 13px; font-family: var(--ff-jost); line-height: 1.2;">Workshops<br>Conducted</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 stat-item border-end">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <i class="bi bi-award text-primary fs-2 mb-2 mb-md-0 me-md-3" style="color: #6a4b8c !important;"></i>
+                        <div class="text-center text-md-start">
+                            <h4 class="mb-0 fw-bold" style="color: var(--primary-color); font-family: var(--ff-jost);">25+</h4>
+                            <p class="mb-0 text-muted" style="font-size: 13px; font-family: var(--ff-jost); line-height: 1.2;">Years of<br>Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                        <i class="bi bi-globe text-primary fs-2 mb-2 mb-md-0 me-md-3" style="color: #6a4b8c !important;"></i>
+                        <div class="text-center text-md-start">
+                            <h4 class="mb-0 fw-bold" style="color: var(--primary-color); font-family: var(--ff-jost);">35+</h4>
+                            <p class="mb-0 text-muted" style="font-size: 13px; font-family: var(--ff-jost); line-height: 1.2;">Countries<br>Reached</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Custom Section -->
+    <section class="why-choose-me-custom py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="banner-eyebrow text-center mb-2 mx-auto" data-aos="fade-up" data-aos-duration="1000">WHY CHOOSE ME</div>
+                <h2 data-aos="fade-up" data-aos-duration="1500" style="color: var(--primary-color); font-family: var(--ff-garamond); font-size: 42px; font-weight: 600;">Why Thousands Trust Seemma Jain</h2>
+                <p data-aos="fade-up" data-aos-duration="2000" class="text-muted mx-auto" style="max-width: 600px; font-size: 16px;">Helping people reconnect with themselves through ancient wisdom and modern transformational techniques.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="wcm-card" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="wcm-icon"><i class="bi bi-flower1"></i></div>
+                        <h4>Healing Sessions</h4>
+                        <p>Personalized energy healing to release emotional blocks.</p>
+                        <a href="javascript:void(0)" class="wcm-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="wcm-card" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="wcm-icon"><i class="bi bi-journal-text"></i></div>
+                        <h4>Akashic Records</h4>
+                        <p>Discover your soul purpose and gain clarity on life's hidden patterns.</p>
+                        <a href="javascript:void(0)" class="wcm-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="wcm-card" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="wcm-icon"><i class="bi bi-tree"></i></div>
+                        <h4>Spiritual Coaching</h4>
+                        <p>Build confidence, clarity and inner peace with one-on-one guidance.</p>
+                        <a href="javascript:void(0)" class="wcm-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="wcm-card" data-aos="fade-up" data-aos-duration="2500">
+                        <div class="wcm-icon"><i class="bi bi-stars"></i></div>
+                        <h4>Transformational Courses</h4>
+                        <p>Self-paced courses designed for deep healing and lifelong growth.</p>
+                        <a href="javascript:void(0)" class="wcm-link">Learn More &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -28,83 +153,74 @@
     </section>
     <!-- End Banner -->
     <!-- Services Section -->
-    <section class="services">
-        <div class="container">
+    <section class="services position-relative py-5">
+        <div class="services-bg-overlay"></div>
+        <div class="container position-relative z-3">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="{{ asset('frontend/assets/img/services.png') }}" class="img-fluid services-img" alt="Services"
-                        data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="services-image-wrapper position-relative" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="services-glow"></div>
+                        <img src="{{ asset('frontend/assets/img/services.png') }}" class="img-fluid services-img shadow-lg" alt="Services">
+                        <div class="services-floating-badge" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">
+                            <i class="bi bi-star-fill text-warning mb-2 d-block fs-4"></i>
+                            <span class="fw-bold d-block text-dark" style="font-size: 18px;">16+ Years</span>
+                            <span class="text-muted small">Experience</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 offset-lg-1">
                     <div class="services-content">
-                        <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
-                            <h2>Empowering Lives, One Soul at a Time</h2>
-                            <p><b>Seemma Jain</b> is a globally renowned spiritual healer and life coach, specializing in
-                                Reiki,
-                                Tarot, EFT, Past Life Regression, and mental wellness. With 16+ years of experience, she has
-                                transformed lives worldwide through personalized sessions and workshops.</p>
+                        <div class="sec-header mb-5" data-aos="fade-up" data-aos-duration="500">
+                            <div class="banner-eyebrow mb-2">MY APPROACH</div>
+                            <h2 class="display-5 fw-bold" style="font-family: var(--ff-garamond); color: var(--primary-color);">Empowering Lives, One Soul at a Time</h2>
+                            <p class="text-muted fs-6 lh-lg mt-3" style="font-family: var(--ff-jost);"><b>Seemma Jain</b> is a globally renowned spiritual healer and life coach, specializing in Reiki, Tarot, EFT, Past Life Regression, and mental wellness. With 16+ years of experience, she has transformed lives worldwide through personalized sessions and workshops.</p>
                         </div>
-                        <div class="row">
+                        <div class="row g-4 mt-2">
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/word-of-mouth.png') }}" width="62"
-                                            alt="Switch Word">
+                                <div class="service-feature-card h-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                                    <div class="sfc-icon-wrapper mb-3">
+                                        <img src="{{ asset('frontend/assets/img/word-of-mouth.png') }}" width="30" alt="Discover Your Potential">
                                     </div>
-                                    <div class="ser-txt">
-                                        <h6>Discover Your Potential</h6>
-                                        <p>Seemma Jain empowers individuals to break free from limitations. With expertise
-                                            in life coaching, Reiki, and mental wellness practices, she guides clients to
-                                            uncover their strengths and embrace transformative growth.</p>
+                                    <div class="sfc-content">
+                                        <h6 class="fw-bold mb-2">Discover Your Potential</h6>
+                                        <p class="text-muted small mb-0 lh-sm">Seemma Jain empowers individuals to break free from limitations. With expertise in life coaching, Reiki, and mental wellness practices, she guides clients to uncover their strengths and embrace transformative growth.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="1000">
-                                    <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/love-yourself.png') }}" width="62"
-                                            alt="Your Self">
+                                <div class="service-feature-card h-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                                    <div class="sfc-icon-wrapper mb-3">
+                                        <img src="{{ asset('frontend/assets/img/love-yourself.png') }}" width="30" alt="Your Self, Reimagined">
                                     </div>
-                                    <div class="ser-txt">
-                                        <h6>Your Self, Reimagined</h6>
-                                        <p>As a dedicated healer, Seemma addresses challenges like stress, anxiety, and
-                                            emotional blocks. Through her personalized sessions, she helps clients
-                                            rediscover clarity, balance, and purpose in life.</p>
+                                    <div class="sfc-content">
+                                        <h6 class="fw-bold mb-2">Your Self, Reimagined</h6>
+                                        <p class="text-muted small mb-0 lh-sm">As a dedicated healer, Seemma addresses challenges like stress, anxiety, and emotional blocks. Through her personalized sessions, she helps clients rediscover clarity, balance, and purpose in life.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="2000">
-                                    <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/origin.png') }}" width="62"
-                                            alt="Transformed">
+                                <div class="service-feature-card h-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                                    <div class="sfc-icon-wrapper mb-3">
+                                        <img src="{{ asset('frontend/assets/img/origin.png') }}" width="30" alt="Transformed Lives, Global Reach">
                                     </div>
-                                    <div class="ser-txt">
-                                        <h6>Transformed Lives, Global Reach</h6>
-                                        <p>With a global presence spanning the USA, UK, Canada, and beyond, Seemma’s
-                                            workshops and sessions have transformed countless lives. Her methods combine
-                                            ancient wisdom with contemporary healing techniques.</p>
+                                    <div class="sfc-content">
+                                        <h6 class="fw-bold mb-2">Transformed Lives, Global Reach</h6>
+                                        <p class="text-muted small mb-0 lh-sm">With a global presence spanning the USA, UK, Canada, and beyond, Seemma’s workshops and sessions have transformed countless lives. Her methods combine ancient wisdom with contemporary healing techniques.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center mb-4" data-aos="fade-up" data-aos-duration="3000">
-                                    <div class="ser-icon">
-                                        <img src="{{ asset('frontend/assets/img/quality-of-life.png') }}" width="62"
-                                            alt="Transformed">
+                                <div class="service-feature-card h-100" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                                    <div class="sfc-icon-wrapper mb-3">
+                                        <img src="{{ asset('frontend/assets/img/quality-of-life.png') }}" width="30" alt="Design Your Life">
                                     </div>
-                                    <div class="ser-txt">
-                                        <h6>Design Your Life</h6>
-                                        <p>Through techniques like Past Life Regression, EFT, and Angel Healing, Seemma
-                                            inspires clients to take control of their journey. Her approach is designed to
-                                            unlock potential and lead to lasting transformation.</p>
+                                    <div class="sfc-content">
+                                        <h6 class="fw-bold mb-2">Design Your Life</h6>
+                                        <p class="text-muted small mb-0 lh-sm">Through techniques like Past Life Regression, EFT, and Angel Healing, Seemma inspires clients to take control of their journey. Her approach is designed to unlock potential and lead to lasting transformation.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- <a href="javascript:void(0)" class="ma-btn ma-btn-primary mt-4" data-aos="zoom-in-left"
-                            data-aos-duration="3000">Know
-                            More</a> -->
                     </div>
                 </div>
             </div>
@@ -112,29 +228,35 @@
     </section>
     <!-- End Services -->
     <!-- Popular Classes Section -->
-    <section class="popular-classes sec">
+    <section class="popular-classes py-5 bg-light">
         <div class="container" id="popularcourses">
-            <div class="row">
-                <div class="col-12">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
                     <div class="sec-header" data-aos="fade-up" data-aos-duration="500">
-                        <h2>Popular Course​s</h2>
+                        <div class="banner-eyebrow mb-2">LEARN & GROW</div>
+                        <h2 class="display-5 fw-bold" style="font-family: var(--ff-garamond); color: var(--primary-color);">Popular Courses</h2>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <div class="slick-slider" id="popClsCarousel">
                         @foreach ($courses as $course)
-                            <div class="item">
-                                <div class="pop-cls-img">
-                                    <img src="{{ asset('storage/' . $course->image) }}" alt="{{ $course->title }}">
-                                </div>
-                                <div class="pop-cls-icon">
-                                    <i class="bi bi-brightness-high"></i>
-                                </div>
-                                <div class="pop-cls-txt">
-                                    <h5>{{ $course->title }}</h5>
-                                    <a href="{{ route('courseDetail', $course->slug) }}"
-                                        class="ma-btn ma-btn-primary ma-btn-sm px-4 rounded-pill ff-jost">Read
-                                        More</a>
+                            <div class="item px-3 py-2">
+                                <div class="course-card h-100 position-relative">
+                                    <div class="course-img-wrapper overflow-hidden">
+                                        <img src="{{ asset('storage/' . $course->image) }}" class="img-fluid w-100 course-img" alt="{{ $course->title }}">
+                                        <div class="course-overlay d-flex align-items-center justify-content-center">
+                                            <a href="{{ route('courseDetail', $course->slug) }}" class="btn-primary-custom btn-sm rounded-pill px-4 py-2" style="font-size: 14px;">View Course</a>
+                                        </div>
+                                    </div>
+                                    <div class="course-content p-4 text-center">
+                                        <div class="course-icon-badge mb-3">
+                                            <i class="bi bi-mortarboard text-primary fs-4"></i>
+                                        </div>
+                                        <h5 class="fw-bold mb-3" style="font-family: var(--ff-jost); font-size: 20px;">{{ $course->title }}</h5>
+                                        <a href="{{ route('courseDetail', $course->slug) }}" class="course-link fw-medium">Read More &rarr;</a>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
