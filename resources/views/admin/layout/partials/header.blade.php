@@ -2,8 +2,8 @@
 
     <div class="d-flex align-items-center justify-content-between">
         <a href="{{ route('admin.dashboard') }}" class="logo d-flex align-items-center">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="">
-            <span class="d-none d-lg-block" style="    text-transform: uppercase;">{{ env('APP_NAME') }}</span>
+            <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Logo" style="background-color: #412379; padding: 5px; border-radius: 5px;">
+            <!-- <span class="d-none d-lg-block" style="text-transform: uppercase;">Seemma Jain</span> -->
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>

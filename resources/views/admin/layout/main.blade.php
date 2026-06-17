@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') {{ env('APP_NAME') }}</title>
+    <title>@yield('title') Seemma Jain</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -69,7 +69,7 @@
 
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>{{ env('APP_NAME') }}</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Seemma Jain</span></strong>. All Rights Reserved
         </div>
     </footer>
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Administrative / Login - {{env('APP_NAME')}}</title>
+    <title>Administrative / Login - Seemma Jain</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
@@ -32,8 +32,8 @@
 
                             <div class="d-flex justify-content-center py-4">
                                 <a href="index.html" class="logo d-flex align-items-center w-auto">
-                                    <img src="{{ asset('assets/img/logo.png') }}" alt="">
-                                    <span class="d-none d-lg-block">{{env('APP_NAME')}}</span>
+                                    <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Logo" style="background-color: purple; padding: 5px; border-radius: 5px;">
+                                    <span class="d-none d-lg-block">Seemma Jain</span>
                                 </a>
                             </div><!-- End Logo -->
 
