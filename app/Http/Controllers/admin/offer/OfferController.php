@@ -11,7 +11,7 @@ class OfferController extends Controller
 {
     public function index()
 {
-    $offers = Offer::paginate(10); // Paginate offers with 10 per page
+    $offers = Offer::orderBy('created_at', 'desc')->paginate(10); // Paginate offers with 10 per page
 
     $offers->getCollection()->transform(function ($offer) {
         $offer->courses = Course::whereIn('id', $offer->course_ids)->get();

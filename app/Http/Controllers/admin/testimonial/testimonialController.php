@@ -13,7 +13,7 @@ class testimonialController extends Controller
      */
     public function index()
     {
-        $testimonials = Testimonial::paginate(10); // Paginate results
+        $testimonials = Testimonial::orderBy('created_at', 'desc')->paginate(10); // Paginate results
         return view('admin.testimonial.index', compact('testimonials'));
     }
 

@@ -13,7 +13,7 @@ class seoController extends Controller
      */
     public function index()
     {
-        $seoData = Seo::paginate(10); // Paginate the data
+        $seoData = Seo::orderBy('created_at', 'desc')->paginate(10); // Paginate the data
         return view('admin.seo.index', compact('seoData'));
     }
 

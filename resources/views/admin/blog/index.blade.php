@@ -8,11 +8,14 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h5 class="card-title">All Blogs</h5>
-                        <a class="btn btn-sm btn-outline-success float-end" href="{{ route('blogs.create') }}">Add Blog</a>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title m-0">All Blogs</h5>
+                            <a class="btn btn-sm btn-outline-success" href="{{ route('blogs.create') }}">Add Blog</a>
+                        </div>
                         
-                        <table class="table">
-                            <thead>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered align-middle">
+                                <thead class="table-light">
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Title</th>
@@ -49,7 +52,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $blogs->links() }}
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            {{ $blogs->links('pagination::bootstrap-5') }}
+                        </div>
                         <!-- End Default Table Example -->
                     </div>
                 </div>

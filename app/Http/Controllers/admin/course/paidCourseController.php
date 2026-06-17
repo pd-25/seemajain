@@ -12,7 +12,7 @@ class paidCourseController extends Controller
 {
     public function index()
     {
-        $courses = Course::paginate(10);
+        $courses = Course::orderBy('created_at', 'desc')->paginate(10);
         // $applycount = CourseRequest::count();
         return view('admin.course.paid_course.index', compact('courses'));
     }
