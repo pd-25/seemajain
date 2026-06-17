@@ -41,17 +41,22 @@
                                         <td>${{ number_format($course->sale_price, 2) }}</td>
                                         <td>{{ \Carbon\Carbon::parse($course->created_at)->isoFormat('Do MMMM YYYY') }}</td>
                                         <td>
-                                            <a href="{{ route('paid-courses.show', $course->id) }}"><i class="ri-eye-fill">{{$course->courseRequests->count()}}</i></a>
-                                            <a href="{{ route('paid-courses.edit', $course->id) }}"><i class="ri-pencil-fill"></i></a>
-                                            <form method="POST" action="{{ route('paid-courses.destroy', $course->id) }}" 
-                                                  class="d-inline-block pl-2">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="delete-icon show_confirm" 
-                                                        data-toggle="tooltip" title="Delete">
-                                                    <i class="ri-delete-bin-2-fill"></i>
-                                                </button>
-                                            </form>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <a href="{{ route('paid-courses.show', $course->id) }}" class="btn btn-sm btn-outline-info d-flex align-items-center" data-bs-toggle="tooltip" title="View">
+                                                    <i class="ri-eye-fill"></i>
+                                                    <span class="badge bg-info text-dark ms-1">{{$course->courseRequests->count()}}</span>
+                                                </a>
+                                                <a href="{{ route('paid-courses.edit', $course->id) }}" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="ri-pencil-fill"></i>
+                                                </a>
+                                                <form method="POST" action="{{ route('paid-courses.destroy', $course->id) }}" class="m-0">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger show_confirm" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="ri-delete-bin-2-fill"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

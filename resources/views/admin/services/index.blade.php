@@ -41,18 +41,22 @@
                                        
                                         <td>{{ $service->created_at->isoFormat('Do MMMM YYYY') }}</td>
                                         <td>
-                                            <a href="{{ route('services.show', $service->id) }}"><i class="ri-eye-fill">{{$service->serviceRequests->count()}}</i></a>
-
-                                            <a href="{{ route('services.edit', $service->id) }}"><i class="ri-pencil-fill"></i></a>
-                                            <form method="POST" action="{{ route('services.destroy', $service->id) }}" 
-                                                  class="d-inline-block">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="delete-icon show_confirm" 
-                                                        data-toggle="tooltip" title="Delete">
-                                                    <i class="ri-delete-bin-2-fill"></i>
-                                                </button>
-                                            </form>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <a href="{{ route('services.show', $service->id) }}" class="btn btn-sm btn-outline-info d-flex align-items-center" data-bs-toggle="tooltip" title="View">
+                                                    <i class="ri-eye-fill"></i>
+                                                    <span class="badge bg-info text-dark ms-1">{{$service->serviceRequests->count()}}</span>
+                                                </a>
+                                                <a href="{{ route('services.edit', $service->id) }}" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="ri-pencil-fill"></i>
+                                                </a>
+                                                <form method="POST" action="{{ route('services.destroy', $service->id) }}" class="m-0">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger show_confirm" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="ri-delete-bin-2-fill"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -37,16 +37,18 @@
                                         {{-- <td>{{ ucfirst($video->type) }}</td> --}}
                                         <td>{{ \Carbon\Carbon::parse($video->created_at)->isoFormat('Do MMMM YYYY') }}</td>
                                         <td>
-                                            <a href="{{ route('testimonial-video.edit', $video->id) }}"><i class="ri-pencil-fill"></i></a>
-                                            <form method="POST" action="{{ route('testimonial-video.destroy', $video->id) }}" 
-                                                  class="d-inline-block pl-2">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="delete-icon show_confirm" 
-                                                        data-toggle="tooltip" title="Delete">
-                                                    <i class="ri-delete-bin-2-fill"></i>
-                                                </button>
-                                            </form>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <a href="{{ route('testimonial-video.edit', $video->id) }}" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="ri-pencil-fill"></i>
+                                                </a>
+                                                <form method="POST" action="{{ route('testimonial-video.destroy', $video->id) }}" class="m-0">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger show_confirm" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="ri-delete-bin-2-fill"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach

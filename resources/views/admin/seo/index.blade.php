@@ -37,14 +37,18 @@
                                         <td>{{ Str::limit($data->meta_description, 50) }}</td>
                                         <td>{{ Str::limit($data->hederscript, 50) }}</td>
                                         <td>
-                                            <a href="{{ route('seo.edit', $data->id) }}"><i class="ri-pencil-fill"></i></a>
-                                            <form method="POST" action="{{ route('seo.destroy', $data->id) }}" class="d-inline-block pl-2">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="delete-icon show_confirm" data-toggle="tooltip" title='Delete'>
-                                                    <i class="ri-delete-bin-2-fill"></i>
-                                                </button>
-                                            </form>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <a href="{{ route('seo.edit', $data->id) }}" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="Edit">
+                                                    <i class="ri-pencil-fill"></i>
+                                                </a>
+                                                <form method="POST" action="{{ route('seo.destroy', $data->id) }}" class="m-0">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-outline-danger show_confirm" data-bs-toggle="tooltip" title="Delete">
+                                                        <i class="ri-delete-bin-2-fill"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
