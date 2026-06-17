@@ -8,14 +8,18 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <h5 class="card-title">All Free Videos</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title m-0">All Free Videos</h5>
+                            <a class="btn btn-sm btn-outline-success" href="{{ route('free-courses.create') }}">Add Video</a>
+                        </div>
+
                         @if (Session::has('msg'))
                             <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
                         @endif
-                        <a class="btn btn-sm btn-outline-success float-end" href="{{ route('free-courses.create') }}">Add Video</a>
                         
-                        <table class="table">
-                            <thead>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered align-middle">
+                                <thead class="table-light">
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Title</th>
@@ -52,7 +56,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $videos->links() }}
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            {{ $videos->links('pagination::bootstrap-5') }}
+                        </div>
                         <!-- End Default Table Example -->
                     </div>
                 </div>
