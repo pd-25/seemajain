@@ -12,10 +12,6 @@
                             <h5 class="card-title m-0">All Free Videos</h5>
                             <a class="btn btn-sm btn-outline-success" href="{{ route('free-courses.create') }}">Add Video</a>
                         </div>
-
-                        @if (Session::has('msg'))
-                            <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
-                        @endif
                         
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered align-middle">

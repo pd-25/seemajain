@@ -44,6 +44,26 @@
     @include('admin.layout.partials.sidebar')
 
     <main id="main" class="main">
+        <div class="container-fluid mt-3">
+            @if (Session::has('msg'))
+                <div class="alert alert-info alert-dismissible fade show alert-auto-close" role="alert">
+                    {{ Session::get('msg') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if (Session::has('success'))
+                <div class="alert alert-success alert-dismissible fade show alert-auto-close" role="alert">
+                    {{ Session::get('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if (Session::has('error'))
+                <div class="alert alert-danger alert-dismissible fade show alert-auto-close" role="alert">
+                    {{ Session::get('error') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+        </div>
         @yield('content')
     </main>
 
@@ -94,12 +114,13 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            const flashMessage = document.getElementById('flash-message');
-            if (flashMessage) {
-                setTimeout(() => {
-                    flashMessage.remove();
-                }, 3000);
-            }
+            setTimeout(function() {
+                var alerts = document.querySelectorAll('.alert-auto-close');
+                alerts.forEach(function(alert) {
+                    var bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                });
+            }, 3000);
         });
     </script>
 

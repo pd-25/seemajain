@@ -45,7 +45,7 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Administrative
                                             Account</h5>
                                         @if (Session::has('msg'))
-                                            <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
+                                            <div class="alert alert-danger mt-2">{{ Session::get('msg') }}</div>
                                         @endif
                                     </div>
 

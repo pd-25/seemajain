@@ -8,10 +8,6 @@
                 <div class="card-body">
                     <h5 class="card-title">All Testimonials</h5>
 
-                    @if (Session::has('msg'))
-                    <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
-                    @endif
-
                     <a class="btn btn-sm btn-outline-success float-end" href="{{ route('testimonials.create') }}">Add Testimonial</a>
 
                     <table class="table">

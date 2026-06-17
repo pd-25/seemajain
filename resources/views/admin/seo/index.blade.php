@@ -9,9 +9,6 @@
                     <div class="card-body">
 
                         <h5 class="card-title">SEO Management</h5>
-                        @if (Session::has('msg'))
-                            <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
-                        @endif
                         <a class="btn btn-sm btn-outline-success float-end" href="{{ route('seo.create') }}">Add SEO Data</a>
                         
                         <table class="table">

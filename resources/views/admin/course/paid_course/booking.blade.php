@@ -7,9 +7,6 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">{{$service->title}} Apply Request</h5>
-                    @if (Session::has('msg'))
-                        <p id="flash-message" class="alert alert-info">{{ Session::get('msg') }}</p>
-                    @endif
                     {{-- <a class="btn btn-sm btn-outline-success float-end" href="{{ route('services.create') }}">Add Course</a> --}}
                     
                     <table class="table">
