@@ -32,27 +32,28 @@
             /* or darker for dark theme */
         }
 
-            .whatsapp-float{
-        position:fixed;
-        right:20px;
-        bottom:20px;
-        width:60px;
-        height:60px;
-        background:#412379;
-        color:#fff;
-        border-radius:50%;
-        text-align:center;
-        font-size:32px;
-        line-height:60px;
-        box-shadow:0 2px 5px rgba(0,0,0,.3);
-        transition:background .2s;
-        z-index:1000;
-    }
-    .whatsapp-float:hover{
-        background:#1ebe57;
-        text-decoration:none;
-        color:#fff;
-    }
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            background: #412379;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            line-height: 60px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+            transition: background .2s;
+            z-index: 1000;
+        }
+
+        .whatsapp-float:hover {
+            background: #1ebe57;
+            text-decoration: none;
+            color: #fff;
+        }
     </style>
 
 
@@ -60,7 +61,8 @@
 
 <body>
     <!-- Header Section -->
-    <header id="mainHeader" class="header" style="position: sticky; top: 0; background-color: transparent; transition: background-color 0.3s, backdrop-filter 0.3s;">
+    <header id="mainHeader" class="header"
+        style="position: sticky; top: 0; background-color: transparent; transition: background-color 0.3s, backdrop-filter 0.3s;">
         <div class="container">
             <div class="desktop-menu">
                 <div class="row align-items-center">
@@ -208,7 +210,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="border-top text-center py-5">
-                        <p>Copyright @2024 seemmajain.in</p>
+                        <p>Copyright @ {{ date('Y') }} seemmajain.in</p>
                     </div>
                 </div>
             </div>
@@ -217,10 +219,7 @@
     <!-- End Footer -->
 
     <!-- Flotting button -->
-    <a href="https://wa.me/"
-        class="whatsapp-float"
-        target="_blank"
-        aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <!-- Jquery 3.7 -->
@@ -228,7 +227,7 @@
     <!-- Bootstrap 5.3 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Slick Slider -->
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
     <script type="text/javascript" src="https://checkout.razorpay.com/v1/razorpay.js"></script>
@@ -238,7 +237,7 @@
     <script src="{{ asset('frontend/assets/js/site.js') }}"></script>
 
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const header = document.getElementById('mainHeader');
             if (window.scrollY > 10) {
                 header.classList.add('scrolled');

@@ -384,7 +384,7 @@ nav ul li a:hover {
 }
 
 .floating-card.fc-1 { top: 15%; left: 0; animation-delay: 0s; }
-.floating-card.fc-2 { top: 20%; right: -5%; animation-delay: 1.5s; }
+.floating-card.fc-2 { top: -5%; right: -10%; animation-delay: 1.5s; }
 .floating-card.fc-3 { bottom: 25%; left: -5%; animation-delay: 3s; }
 .floating-card.fc-4 { bottom: 20%; right: 5%; animation-delay: 4.5s; }
 

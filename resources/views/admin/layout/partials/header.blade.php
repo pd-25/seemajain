@@ -1,7 +1,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{ route('admin.dashboard') }}" class="logo d-flex align-items-center">
+        <a href="{{ route('admin.dashboard') }}" class="adminlogo d-flex align-items-center">
             <img src="{{ asset('frontend/assets/img/logo.png') }}" alt="Logo" style="background-color: #412379; padding: 5px; border-radius: 5px;">
             <!-- <span class="d-none d-lg-block" style="text-transform: uppercase;">Seemma Jain</span> -->
         </a>

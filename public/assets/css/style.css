@@ -369,6 +369,11 @@ h6 {
     margin-right: 6px;
 }
 
+.adminlogo img {
+    max-height: 55px;
+    margin-right: 6px;
+}
+
 .logo span {
     font-size: 26px;
     font-weight: 700;

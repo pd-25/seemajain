@@ -53,7 +53,8 @@
     }
 
     .banner {
-        height: 650px;
+        height: auto;
+        min-height: 650px;
     }
 
     nav ul li a {
@@ -63,7 +64,8 @@
 
 @media (max-width: 991px) {
     .banner {
-        height: 520px;
+        height: auto;
+        min-height: 520px;
     }
 
     .services-img {
@@ -101,6 +103,6 @@
     }
 
     .banner-content {
-        padding: 124px 0 0;
+        padding: 20px 0 0;
     }
 }
